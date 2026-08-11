@@ -1,0 +1,29 @@
+# Python / Virtual Environment
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+
+# Environment variables & local configs
+.env
+.vscode/
+.idea/
+.DS_Store
+
+# Data & Model outputs / logs
+results/
+results_*/
+*.log
+*.pt
+*.pth
+*.npy
+*.npz
+*.tar
+*.tar.gz
+*.pptx
+
+# TabM data binaries
+tabm_repo/data/
+tabm_repo/local/

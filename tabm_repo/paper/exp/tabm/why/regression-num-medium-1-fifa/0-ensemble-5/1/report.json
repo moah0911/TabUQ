@@ -1,0 +1,37 @@
+{
+    "function": "bin.ensemble.main",
+    "config": {
+        "seeds": [
+            5,
+            6,
+            7,
+            8,
+            9
+        ],
+        "data": {
+            "path": "data/regression-num-medium-1-fifa"
+        }
+    },
+    "single_model_function": "bin.model.main",
+    "prediction_type": "labels",
+    "metrics": {
+        "train": {
+            "rmse": 0.7434720617969908,
+            "mae": 0.5494605302810669,
+            "r2": 0.706402325546206,
+            "score": -0.7434720617969908
+        },
+        "val": {
+            "rmse": 0.759712472345933,
+            "mae": 0.5628060698509216,
+            "r2": 0.6890296607771729,
+            "score": -0.759712472345933
+        },
+        "test": {
+            "rmse": 0.7811334141525162,
+            "mae": 0.5749068856239319,
+            "r2": 0.659205013442133,
+            "score": -0.7811334141525162
+        }
+    }
+}

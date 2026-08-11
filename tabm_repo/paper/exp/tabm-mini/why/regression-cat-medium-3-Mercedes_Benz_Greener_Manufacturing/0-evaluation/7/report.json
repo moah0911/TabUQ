@@ -1,0 +1,62 @@
+{
+    "function": "bin.model.main",
+    "gpus": [
+        "NVIDIA A100-SXM4-80GB"
+    ],
+    "config": {
+        "seed": 7,
+        "batch_size": 64,
+        "patience": 16,
+        "n_epochs": -1,
+        "gradient_clipping_norm": 1.0,
+        "amp": true,
+        "data": {
+            "cache": true,
+            "path": "data/regression-cat-medium-3-Mercedes_Benz_Greener_Manufacturing",
+            "cat_policy": "ordinal"
+        },
+        "optimizer": {
+            "type": "AdamW",
+            "lr": 0.0009205089620788239,
+            "weight_decay": 0.0
+        },
+        "model": {
+            "arch_type": "tabm-mini",
+            "k": 32,
+            "share_training_batches": false,
+            "backbone": {
+                "type": "MLP",
+                "n_blocks": 5,
+                "d_block": 992,
+                "dropout": 0.31218377545609133
+            }
+        }
+    },
+    "n_parameters": 4711296,
+    "prediction_type": "labels",
+    "epoch_size": 47,
+    "best_step": 188,
+    "metrics": {
+        "train": {
+            "rmse": 7.937877976436702,
+            "mae": 5.259069442749023,
+            "r2": 0.5974295587748378,
+            "score": -7.937877976436702
+        },
+        "val": {
+            "rmse": 12.282175587338065,
+            "mae": 6.298928737640381,
+            "r2": 0.3439674967531934,
+            "score": -12.282175587338065
+        },
+        "test": {
+            "rmse": 7.5121003766650905,
+            "mae": 5.223277568817139,
+            "r2": 0.610510495433418,
+            "score": -7.5121003766650905
+        }
+    },
+    "time": "0:00:11.905475",
+    "chunk_size": null,
+    "eval_batch_size": 32768
+}

@@ -1,0 +1,137 @@
+{
+    "function": "bin.tune.main",
+    "gpus": [
+        "NVIDIA A100-SXM4-80GB"
+    ],
+    "config": {
+        "seed": 0,
+        "function": "bin.model.main",
+        "n_trials": 100,
+        "sampler": {
+            "n_startup_trials": 20
+        },
+        "space": {
+            "seed": 0,
+            "batch_size": 256,
+            "patience": 16,
+            "n_epochs": -1,
+            "gradient_clipping_norm": 1.0,
+            "amp": true,
+            "data": {
+                "cache": true,
+                "path": "data/regression-cat-medium-0-OnlineNewsPopularity",
+                "num_policy": "noisy-quantile"
+            },
+            "optimizer": {
+                "type": "AdamW",
+                "lr": [
+                    "_tune_",
+                    "loguniform",
+                    0.0001,
+                    0.003
+                ],
+                "weight_decay": [
+                    "_tune_",
+                    "?loguniform",
+                    0.0,
+                    0.0001,
+                    0.1
+                ]
+            },
+            "model": {
+                "arch_type": "tabm-mini",
+                "k": 32,
+                "share_training_batches": false,
+                "backbone": {
+                    "type": "MLP",
+                    "n_blocks": [
+                        "_tune_",
+                        "int",
+                        1,
+                        5
+                    ],
+                    "d_block": [
+                        "_tune_",
+                        "int",
+                        64,
+                        1024,
+                        16
+                    ],
+                    "dropout": [
+                        "_tune_",
+                        "?uniform",
+                        0.0,
+                        0.0,
+                        0.5
+                    ]
+                }
+            }
+        }
+    },
+    "best": {
+        "function": "bin.model.main",
+        "gpus": [
+            "NVIDIA A100-SXM4-80GB"
+        ],
+        "config": {
+            "seed": 0,
+            "batch_size": 256,
+            "patience": 16,
+            "n_epochs": -1,
+            "gradient_clipping_norm": 1.0,
+            "amp": true,
+            "data": {
+                "cache": true,
+                "path": "data/regression-cat-medium-0-OnlineNewsPopularity",
+                "num_policy": "noisy-quantile"
+            },
+            "optimizer": {
+                "type": "AdamW",
+                "lr": 0.0008912646954935661,
+                "weight_decay": 0.004907185760053837
+            },
+            "model": {
+                "arch_type": "tabm-mini",
+                "k": 32,
+                "share_training_batches": false,
+                "backbone": {
+                    "type": "MLP",
+                    "n_blocks": 4,
+                    "d_block": 96,
+                    "dropout": 0.0
+                }
+            }
+        },
+        "n_parameters": 40480,
+        "prediction_type": "labels",
+        "epoch_size": 40,
+        "best_step": 2240,
+        "metrics": {
+            "train": {
+                "rmse": 0.7866111295366157,
+                "mae": 0.5789003968238831,
+                "r2": 0.28530128559215306,
+                "score": -0.7866111295366157
+            },
+            "val": {
+                "rmse": 0.842178682978237,
+                "mae": 0.6222785115242004,
+                "r2": 0.1588485286017447,
+                "score": -0.842178682978237
+            },
+            "test": {
+                "rmse": 0.8582796225054047,
+                "mae": 0.6290534734725952,
+                "r2": 0.15578268724041244,
+                "score": -0.8582796225054047
+            }
+        },
+        "time": "0:00:09.659714",
+        "chunk_size": null,
+        "eval_batch_size": 32768,
+        "trial_id": 88,
+        "tuning_time": "0:10:04.114154"
+    },
+    "time": "0:11:22.281724",
+    "n_completed_trials": 100
+}

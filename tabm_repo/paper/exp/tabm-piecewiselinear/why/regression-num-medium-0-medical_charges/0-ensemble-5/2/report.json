@@ -1,0 +1,37 @@
+{
+    "function": "bin.ensemble.main",
+    "config": {
+        "seeds": [
+            10,
+            11,
+            12,
+            13,
+            14
+        ],
+        "data": {
+            "path": "data/regression-num-medium-0-medical_charges"
+        }
+    },
+    "single_model_function": "bin.model.main",
+    "prediction_type": "labels",
+    "metrics": {
+        "train": {
+            "rmse": 0.07874606747118026,
+            "mae": 0.05085190758109093,
+            "r2": 0.9802017273940312,
+            "score": -0.07874606747118026
+        },
+        "val": {
+            "rmse": 0.08184956685195129,
+            "mae": 0.05152375251054764,
+            "r2": 0.9791360439635272,
+            "score": -0.08184956685195129
+        },
+        "test": {
+            "rmse": 0.08108192583659742,
+            "mae": 0.05117075517773628,
+            "r2": 0.9795746626436062,
+            "score": -0.08108192583659742
+        }
+    }
+}

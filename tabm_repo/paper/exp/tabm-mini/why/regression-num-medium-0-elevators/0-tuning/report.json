@@ -1,0 +1,137 @@
+{
+    "function": "bin.tune.main",
+    "gpus": [
+        "NVIDIA A100-SXM4-80GB"
+    ],
+    "config": {
+        "seed": 0,
+        "function": "bin.model.main",
+        "n_trials": 100,
+        "sampler": {
+            "n_startup_trials": 20
+        },
+        "space": {
+            "seed": 0,
+            "batch_size": 256,
+            "patience": 16,
+            "n_epochs": -1,
+            "gradient_clipping_norm": 1.0,
+            "amp": true,
+            "data": {
+                "cache": true,
+                "path": "data/regression-num-medium-0-elevators",
+                "num_policy": "noisy-quantile"
+            },
+            "optimizer": {
+                "type": "AdamW",
+                "lr": [
+                    "_tune_",
+                    "loguniform",
+                    0.0001,
+                    0.003
+                ],
+                "weight_decay": [
+                    "_tune_",
+                    "?loguniform",
+                    0.0,
+                    0.0001,
+                    0.1
+                ]
+            },
+            "model": {
+                "arch_type": "tabm-mini",
+                "k": 32,
+                "share_training_batches": false,
+                "backbone": {
+                    "type": "MLP",
+                    "n_blocks": [
+                        "_tune_",
+                        "int",
+                        1,
+                        5
+                    ],
+                    "d_block": [
+                        "_tune_",
+                        "int",
+                        64,
+                        1024,
+                        16
+                    ],
+                    "dropout": [
+                        "_tune_",
+                        "?uniform",
+                        0.0,
+                        0.0,
+                        0.5
+                    ]
+                }
+            }
+        }
+    },
+    "best": {
+        "function": "bin.model.main",
+        "gpus": [
+            "NVIDIA A100-SXM4-80GB"
+        ],
+        "config": {
+            "seed": 0,
+            "batch_size": 256,
+            "patience": 16,
+            "n_epochs": -1,
+            "gradient_clipping_norm": 1.0,
+            "amp": true,
+            "data": {
+                "cache": true,
+                "path": "data/regression-num-medium-0-elevators",
+                "num_policy": "noisy-quantile"
+            },
+            "optimizer": {
+                "type": "AdamW",
+                "lr": 0.0019435544142963096,
+                "weight_decay": 0.0966053115093337
+            },
+            "model": {
+                "arch_type": "tabm-mini",
+                "k": 32,
+                "share_training_batches": false,
+                "backbone": {
+                    "type": "MLP",
+                    "n_blocks": 3,
+                    "d_block": 128,
+                    "dropout": 0.0
+                }
+            }
+        },
+        "n_parameters": 39840,
+        "prediction_type": "labels",
+        "epoch_size": 40,
+        "best_step": 10560,
+        "metrics": {
+            "train": {
+                "rmse": 0.0016802951894866179,
+                "mae": 0.0012710918672382832,
+                "r2": 0.9360779551484704,
+                "score": -0.0016802951894866179
+            },
+            "val": {
+                "rmse": 0.001892739374821793,
+                "mae": 0.0013892643619328737,
+                "r2": 0.9212279263356106,
+                "score": -0.001892739374821793
+            },
+            "test": {
+                "rmse": 0.0018564223483791198,
+                "mae": 0.001394166611135006,
+                "r2": 0.9266801901366605,
+                "score": -0.0018564223483791198
+            }
+        },
+        "time": "0:00:31.854687",
+        "chunk_size": null,
+        "eval_batch_size": 32768,
+        "trial_id": 86,
+        "tuning_time": "0:23:06.675800"
+    },
+    "time": "0:26:02.877051",
+    "n_completed_trials": 100
+}

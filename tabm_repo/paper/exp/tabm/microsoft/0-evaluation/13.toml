@@ -1,0 +1,27 @@
+seed = 13
+batch_size = 1024
+patience = 16
+n_epochs = -1
+gradient_clipping_norm = 1.0
+amp = true
+
+[data]
+cache = true
+path = "data/microsoft"
+num_policy = "noisy-quantile"
+
+[optimizer]
+type = "AdamW"
+lr = 0.0022573429413664937
+weight_decay = 0.0005196195864034094
+
+[model]
+arch_type = "tabm"
+k = 32
+share_training_batches = false
+
+[model.backbone]
+type = "MLP"
+n_blocks = 5
+d_block = 544
+dropout = 0.17192838843215202

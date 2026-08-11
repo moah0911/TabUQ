@@ -1,0 +1,37 @@
+{
+    "function": "bin.ensemble.main",
+    "config": {
+        "seeds": [
+            5,
+            6,
+            7,
+            8,
+            9
+        ],
+        "data": {
+            "path": "data/regression-cat-large-0-particulate-matter-ukair-2017"
+        }
+    },
+    "single_model_function": "bin.model.main",
+    "prediction_type": "labels",
+    "metrics": {
+        "train": {
+            "rmse": 0.3467643419523132,
+            "mae": 0.2392885386943817,
+            "r2": 0.7415964212062407,
+            "score": -0.3467643419523132
+        },
+        "val": {
+            "rmse": 0.3703853471142985,
+            "mae": 0.2552239000797272,
+            "r2": 0.7020232173277803,
+            "score": -0.3703853471142985
+        },
+        "test": {
+            "rmse": 0.365621107031809,
+            "mae": 0.25219616293907166,
+            "r2": 0.710556053860852,
+            "score": -0.365621107031809
+        }
+    }
+}

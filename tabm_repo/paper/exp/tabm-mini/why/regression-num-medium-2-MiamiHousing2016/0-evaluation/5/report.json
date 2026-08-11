@@ -1,0 +1,62 @@
+{
+    "function": "bin.model.main",
+    "gpus": [
+        "NVIDIA A100-SXM4-80GB"
+    ],
+    "config": {
+        "seed": 5,
+        "batch_size": 256,
+        "patience": 16,
+        "n_epochs": -1,
+        "gradient_clipping_norm": 1.0,
+        "amp": true,
+        "data": {
+            "cache": true,
+            "path": "data/regression-num-medium-2-MiamiHousing2016",
+            "num_policy": "noisy-quantile"
+        },
+        "optimizer": {
+            "type": "AdamW",
+            "lr": 0.0023949803190832105,
+            "weight_decay": 0.0004253072066259797
+        },
+        "model": {
+            "arch_type": "tabm-mini",
+            "k": 32,
+            "share_training_batches": false,
+            "backbone": {
+                "type": "MLP",
+                "n_blocks": 4,
+                "d_block": 128,
+                "dropout": 0.0
+            }
+        }
+    },
+    "n_parameters": 55872,
+    "prediction_type": "labels",
+    "epoch_size": 39,
+    "best_step": 7176,
+    "metrics": {
+        "train": {
+            "rmse": 0.11932462023625262,
+            "mae": 0.08407682925462723,
+            "r2": 0.9561774752326323,
+            "score": -0.11932462023625262
+        },
+        "val": {
+            "rmse": 0.1376244382872799,
+            "mae": 0.09476182609796524,
+            "r2": 0.9392023714125226,
+            "score": -0.1376244382872799
+        },
+        "test": {
+            "rmse": 0.14977227697190945,
+            "mae": 0.10262845456600189,
+            "r2": 0.9295938322170546,
+            "score": -0.14977227697190945
+        }
+    },
+    "time": "0:00:24.911879",
+    "chunk_size": null,
+    "eval_batch_size": 32768
+}

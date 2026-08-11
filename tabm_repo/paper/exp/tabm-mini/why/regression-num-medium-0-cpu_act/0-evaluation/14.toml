@@ -1,0 +1,27 @@
+seed = 14
+batch_size = 128
+patience = 16
+n_epochs = -1
+gradient_clipping_norm = 1.0
+amp = true
+
+[data]
+cache = true
+path = "data/regression-num-medium-0-cpu_act"
+num_policy = "noisy-quantile"
+
+[optimizer]
+type = "AdamW"
+lr = 0.0005784311280786035
+weight_decay = 0.00035609395150743673
+
+[model]
+arch_type = "tabm-mini"
+k = 32
+share_training_batches = false
+
+[model.backbone]
+type = "MLP"
+n_blocks = 4
+d_block = 416
+dropout = 0.02076922010379244

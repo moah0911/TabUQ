@@ -1,0 +1,37 @@
+{
+    "function": "bin.ensemble.main",
+    "config": {
+        "seeds": [
+            10,
+            11,
+            12,
+            13,
+            14
+        ],
+        "data": {
+            "path": "data/regression-num-medium-0-MiamiHousing2016"
+        }
+    },
+    "single_model_function": "bin.model.main",
+    "prediction_type": "labels",
+    "metrics": {
+        "train": {
+            "rmse": 0.0938225356270686,
+            "mae": 0.06722919642925262,
+            "r2": 0.9726969238461016,
+            "score": -0.0938225356270686
+        },
+        "val": {
+            "rmse": 0.13309029669714112,
+            "mae": 0.0906500443816185,
+            "r2": 0.9448597458728601,
+            "score": -0.13309029669714112
+        },
+        "test": {
+            "rmse": 0.13780482651416787,
+            "mae": 0.09461145848035812,
+            "r2": 0.9411488023511868,
+            "score": -0.13780482651416787
+        }
+    }
+}

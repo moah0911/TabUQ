@@ -1,0 +1,37 @@
+{
+    "function": "bin.ensemble.main",
+    "config": {
+        "seeds": [
+            0,
+            1,
+            2,
+            3,
+            4
+        ],
+        "data": {
+            "path": "data/regression-cat-medium-0-house_sales"
+        }
+    },
+    "single_model_function": "bin.model.main",
+    "prediction_type": "labels",
+    "metrics": {
+        "train": {
+            "rmse": 0.13188172004626425,
+            "mae": 0.09519366174936295,
+            "r2": 0.9375099951823083,
+            "score": -0.13188172004626425
+        },
+        "val": {
+            "rmse": 0.16496603664978485,
+            "mae": 0.11581411212682724,
+            "r2": 0.9029583074388057,
+            "score": -0.16496603664978485
+        },
+        "test": {
+            "rmse": 0.164173429316766,
+            "mae": 0.11582545191049576,
+            "r2": 0.9019458188370315,
+            "score": -0.164173429316766
+        }
+    }
+}

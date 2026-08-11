@@ -1,0 +1,37 @@
+{
+    "function": "bin.ensemble.main",
+    "config": {
+        "seeds": [
+            0,
+            1,
+            2,
+            3,
+            4
+        ],
+        "data": {
+            "path": "data/regression-num-medium-0-pol"
+        }
+    },
+    "single_model_function": "bin.model.main",
+    "prediction_type": "labels",
+    "metrics": {
+        "train": {
+            "rmse": 1.1131971360939077,
+            "mae": 0.5544095039367676,
+            "r2": 0.999280243730895,
+            "score": -1.1131971360939077
+        },
+        "val": {
+            "rmse": 2.9876773797530887,
+            "mae": 1.2180118560791016,
+            "r2": 0.9949902596341877,
+            "score": -2.9876773797530887
+        },
+        "test": {
+            "rmse": 3.1764915206942517,
+            "mae": 1.2153072357177734,
+            "r2": 0.9943217212376405,
+            "score": -3.1764915206942517
+        }
+    }
+}

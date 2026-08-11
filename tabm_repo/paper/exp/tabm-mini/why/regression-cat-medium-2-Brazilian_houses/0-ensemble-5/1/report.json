@@ -1,0 +1,37 @@
+{
+    "function": "bin.ensemble.main",
+    "config": {
+        "seeds": [
+            5,
+            6,
+            7,
+            8,
+            9
+        ],
+        "data": {
+            "path": "data/regression-cat-medium-2-Brazilian_houses"
+        }
+    },
+    "single_model_function": "bin.model.main",
+    "prediction_type": "labels",
+    "metrics": {
+        "train": {
+            "rmse": 0.033440047898435944,
+            "mae": 0.01166257169097662,
+            "r2": 0.9982402985735144,
+            "score": -0.033440047898435944
+        },
+        "val": {
+            "rmse": 0.025683165454194315,
+            "mae": 0.012418657541275024,
+            "r2": 0.9989552915291166,
+            "score": -0.025683165454194315
+        },
+        "test": {
+            "rmse": 0.07575725539322146,
+            "mae": 0.013635305687785149,
+            "r2": 0.9911042158077333,
+            "score": -0.07575725539322146
+        }
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "function": "bin.ensemble.main",
+    "config": {
+        "seeds": [
+            10,
+            11,
+            12,
+            13,
+            14
+        ],
+        "data": {
+            "path": "data/regression-num-medium-1-wine_quality"
+        }
+    },
+    "single_model_function": "bin.model.main",
+    "prediction_type": "labels",
+    "metrics": {
+        "train": {
+            "rmse": 0.09151471683799937,
+            "mae": 0.05750185623764992,
+            "r2": 0.989174985158815,
+            "score": -0.09151471683799937
+        },
+        "val": {
+            "rmse": 0.5867216585089751,
+            "mae": 0.40995678305625916,
+            "r2": 0.5244218436640555,
+            "score": -0.5867216585089751
+        },
+        "test": {
+            "rmse": 0.6088782755764225,
+            "mae": 0.41366490721702576,
+            "r2": 0.4988424390464392,
+            "score": -0.6088782755764225
+        }
+    }
+}

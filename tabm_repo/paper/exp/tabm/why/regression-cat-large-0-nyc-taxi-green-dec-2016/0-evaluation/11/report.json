@@ -1,0 +1,63 @@
+{
+    "function": "bin.model.main",
+    "gpus": [
+        "NVIDIA A100-SXM4-80GB"
+    ],
+    "config": {
+        "seed": 11,
+        "batch_size": 512,
+        "patience": 16,
+        "n_epochs": -1,
+        "gradient_clipping_norm": 1.0,
+        "amp": true,
+        "data": {
+            "cache": true,
+            "path": "data/regression-cat-large-0-nyc-taxi-green-dec-2016",
+            "num_policy": "noisy-quantile",
+            "cat_policy": "ordinal"
+        },
+        "optimizer": {
+            "type": "AdamW",
+            "lr": 0.0023277883684261493,
+            "weight_decay": 0.0
+        },
+        "model": {
+            "arch_type": "tabm",
+            "k": 32,
+            "share_training_batches": false,
+            "backbone": {
+                "type": "MLP",
+                "n_blocks": 5,
+                "d_block": 80,
+                "dropout": 0.0
+            }
+        }
+    },
+    "n_parameters": 67168,
+    "prediction_type": "labels",
+    "epoch_size": 98,
+    "best_step": 6566,
+    "metrics": {
+        "train": {
+            "rmse": 0.36998784766989423,
+            "mae": 0.23986554145812988,
+            "r2": 0.6138372746067734,
+            "score": -0.36998784766989423
+        },
+        "val": {
+            "rmse": 0.38393315917660986,
+            "mae": 0.24635055661201477,
+            "r2": 0.587678952094908,
+            "score": -0.38393315917660986
+        },
+        "test": {
+            "rmse": 0.3842467473996257,
+            "mae": 0.2458665370941162,
+            "r2": 0.5853572738543692,
+            "score": -0.3842467473996257
+        }
+    },
+    "time": "0:00:36.253697",
+    "chunk_size": null,
+    "eval_batch_size": 32768
+}

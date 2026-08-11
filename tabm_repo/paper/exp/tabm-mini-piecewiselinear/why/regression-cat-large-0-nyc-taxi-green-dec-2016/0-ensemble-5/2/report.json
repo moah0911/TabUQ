@@ -1,0 +1,37 @@
+{
+    "function": "bin.ensemble.main",
+    "config": {
+        "seeds": [
+            10,
+            11,
+            12,
+            13,
+            14
+        ],
+        "data": {
+            "path": "data/regression-cat-large-0-nyc-taxi-green-dec-2016"
+        }
+    },
+    "single_model_function": "bin.model.main",
+    "prediction_type": "labels",
+    "metrics": {
+        "train": {
+            "rmse": 0.32531421080111045,
+            "mae": 0.19195020198822021,
+            "r2": 0.7014606774455865,
+            "score": -0.32531421080111045
+        },
+        "val": {
+            "rmse": 0.34503800585358346,
+            "mae": 0.20152828097343445,
+            "r2": 0.6669893009592313,
+            "score": -0.34503800585358346
+        },
+        "test": {
+            "rmse": 0.34526060629276617,
+            "mae": 0.20101705193519592,
+            "r2": 0.6652291139255113,
+            "score": -0.34526060629276617
+        }
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "function": "bin.ensemble.main",
+    "config": {
+        "seeds": [
+            0,
+            1,
+            2,
+            3,
+            4
+        ],
+        "data": {
+            "path": "data/regression-cat-medium-2-analcatdata_supreme"
+        }
+    },
+    "single_model_function": "bin.model.main",
+    "prediction_type": "labels",
+    "metrics": {
+        "train": {
+            "rmse": 0.04920611701919139,
+            "mae": 0.012812432833015919,
+            "r2": 0.9918816422854758,
+            "score": -0.04920611701919139
+        },
+        "val": {
+            "rmse": 0.08970157631622125,
+            "mae": 0.022017212584614754,
+            "r2": 0.9788544899913802,
+            "score": -0.08970157631622125
+        },
+        "test": {
+            "rmse": 0.0802043321491898,
+            "mae": 0.01789434626698494,
+            "r2": 0.9768272414338142,
+            "score": -0.0802043321491898
+        }
+    }
+}

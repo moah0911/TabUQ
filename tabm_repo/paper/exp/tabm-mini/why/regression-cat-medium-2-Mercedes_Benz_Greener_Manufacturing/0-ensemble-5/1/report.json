@@ -1,0 +1,37 @@
+{
+    "function": "bin.ensemble.main",
+    "config": {
+        "seeds": [
+            5,
+            6,
+            7,
+            8,
+            9
+        ],
+        "data": {
+            "path": "data/regression-cat-medium-2-Mercedes_Benz_Greener_Manufacturing"
+        }
+    },
+    "single_model_function": "bin.model.main",
+    "prediction_type": "labels",
+    "metrics": {
+        "train": {
+            "rmse": 7.9709405020093,
+            "mae": 5.068029880523682,
+            "r2": 0.6012075298396234,
+            "score": -7.9709405020093
+        },
+        "val": {
+            "rmse": 9.46120240197372,
+            "mae": 5.95551872253418,
+            "r2": 0.5121031751208136,
+            "score": -9.46120240197372
+        },
+        "test": {
+            "rmse": 7.82519647028648,
+            "mae": 5.345363140106201,
+            "r2": 0.6061724183142408,
+            "score": -7.82519647028648
+        }
+    }
+}

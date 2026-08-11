@@ -1,0 +1,37 @@
+{
+    "function": "bin.ensemble.main",
+    "config": {
+        "seeds": [
+            10,
+            11,
+            12,
+            13,
+            14
+        ],
+        "data": {
+            "path": "data/regression-cat-medium-0-OnlineNewsPopularity"
+        }
+    },
+    "single_model_function": "bin.model.main",
+    "prediction_type": "labels",
+    "metrics": {
+        "train": {
+            "rmse": 0.7905181073691233,
+            "mae": 0.5826340913772583,
+            "r2": 0.27818395119702277,
+            "score": -0.7905181073691233
+        },
+        "val": {
+            "rmse": 0.8432905924436639,
+            "mae": 0.6241487860679626,
+            "r2": 0.1566259917722591,
+            "score": -0.8432905924436639
+        },
+        "test": {
+            "rmse": 0.8584190947701961,
+            "mae": 0.6306269764900208,
+            "r2": 0.15550817549991924,
+            "score": -0.8584190947701961
+        }
+    }
+}

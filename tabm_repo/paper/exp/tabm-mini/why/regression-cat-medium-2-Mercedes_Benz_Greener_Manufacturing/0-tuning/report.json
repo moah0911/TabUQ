@@ -1,0 +1,137 @@
+{
+    "function": "bin.tune.main",
+    "gpus": [
+        "NVIDIA A100-SXM4-80GB"
+    ],
+    "config": {
+        "seed": 0,
+        "function": "bin.model.main",
+        "n_trials": 100,
+        "sampler": {
+            "n_startup_trials": 20
+        },
+        "space": {
+            "seed": 0,
+            "batch_size": 64,
+            "patience": 16,
+            "n_epochs": -1,
+            "gradient_clipping_norm": 1.0,
+            "amp": true,
+            "data": {
+                "cache": true,
+                "path": "data/regression-cat-medium-2-Mercedes_Benz_Greener_Manufacturing",
+                "cat_policy": "ordinal"
+            },
+            "optimizer": {
+                "type": "AdamW",
+                "lr": [
+                    "_tune_",
+                    "loguniform",
+                    0.0001,
+                    0.003
+                ],
+                "weight_decay": [
+                    "_tune_",
+                    "?loguniform",
+                    0.0,
+                    0.0001,
+                    0.1
+                ]
+            },
+            "model": {
+                "arch_type": "tabm-mini",
+                "k": 32,
+                "share_training_batches": false,
+                "backbone": {
+                    "type": "MLP",
+                    "n_blocks": [
+                        "_tune_",
+                        "int",
+                        1,
+                        5
+                    ],
+                    "d_block": [
+                        "_tune_",
+                        "int",
+                        64,
+                        1024,
+                        16
+                    ],
+                    "dropout": [
+                        "_tune_",
+                        "?uniform",
+                        0.0,
+                        0.0,
+                        0.5
+                    ]
+                }
+            }
+        }
+    },
+    "best": {
+        "function": "bin.model.main",
+        "gpus": [
+            "NVIDIA A100-SXM4-80GB"
+        ],
+        "config": {
+            "seed": 0,
+            "batch_size": 64,
+            "patience": 16,
+            "n_epochs": -1,
+            "gradient_clipping_norm": 1.0,
+            "amp": true,
+            "data": {
+                "cache": true,
+                "path": "data/regression-cat-medium-2-Mercedes_Benz_Greener_Manufacturing",
+                "cat_policy": "ordinal"
+            },
+            "optimizer": {
+                "type": "AdamW",
+                "lr": 0.002686570392355881,
+                "weight_decay": 0.00029626749409976887
+            },
+            "model": {
+                "arch_type": "tabm-mini",
+                "k": 32,
+                "share_training_batches": false,
+                "backbone": {
+                    "type": "MLP",
+                    "n_blocks": 5,
+                    "d_block": 960,
+                    "dropout": 0.20696014480963834
+                }
+            }
+        },
+        "n_parameters": 4445120,
+        "prediction_type": "labels",
+        "epoch_size": 47,
+        "best_step": 987,
+        "metrics": {
+            "train": {
+                "rmse": 7.975508632404371,
+                "mae": 5.078112602233887,
+                "r2": 0.6007503199056938,
+                "score": -7.975508632404371
+            },
+            "val": {
+                "rmse": 9.44835155177338,
+                "mae": 5.946156024932861,
+                "r2": 0.5134276686969241,
+                "score": -9.44835155177338
+            },
+            "test": {
+                "rmse": 7.819393930974057,
+                "mae": 5.353803634643555,
+                "r2": 0.6067562702977929,
+                "score": -7.819393930974057
+            }
+        },
+        "time": "0:00:22.221882",
+        "chunk_size": null,
+        "eval_batch_size": 32768,
+        "trial_id": 60,
+        "tuning_time": "0:21:04.576380"
+    },
+    "time": "0:33:36.041556",
+    "n_completed_trials": 100
+}

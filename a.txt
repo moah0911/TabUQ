@@ -1,0 +1,2226 @@
+MVGR COLLEGE OF ENGINEERING (AUTONOMOUS) · DEPARTMENT OF CSE
+
+Final Year Project
+
+Review Presentation Framework
+
+A single, generalised PPT format for all 6 review decks and the Final/Viva deck — usable in common across every project batch.
+
+6
+
+REVIEW DECKS
+
+10
+
+SLIDES / REVIEW
+
+20
+
+FINAL DECK SLIDES
+
+7
+
+THESIS CHAPTERS
+
+2023–2027 Batch · B.Tech · Generalised for all CSE Project Batches · Version 1.0
+
+HOW TO USE THIS FRAMEWORK
+
+Three Rules Before You Touch a Slide
+
+01
+
+One deck per review
+
+Copy the matching 10-slide review section (or the 20-slide Final deck) into your own file. Don't mix slides from different reviews into one deck.
+
+02
+
+Slide titles are generalised — content is yours
+
+Follow the structure and the thesis mapping shown on every slide. Replace bracketed placeholders and the "what to present" bullets with your project's actual content.
+
+03
+
+Every slide maps to a thesis section
+
+The footer on each slide shows exactly which thesis chapter/section it feeds. Finish the slide, then write that section within 1 week — this is how the thesis builds itself.
+
+FYP Review Presentation Framework · MVGR CSE
+
+TABLE OF CONTENTS
+
+What's Inside This Framework
+
+01
+
+Phase 1 · Review 1
+
+Project Acceptance Review
+
+Mon, 13 Jul 2026
+
+10 slides
+
+02
+
+Phase 1 · Review 2
+
+Literature Review &amp; System Design
+
+Mon, 10 Aug 2026
+
+10 slides
+
+03
+
+Phase 1 · Review 3
+
+Implementation Phase I — Core Modules
+
+Mon, 14 Sep 2026
+
+10 slides
+
+04
+
+Phase 1 · Review 4
+
+Implementation Phase II &amp; Phase 1 Completion Gate
+
+Mon, 05 Oct 2026
+
+10 slides
+
+05
+
+Phase 2 · Review 1
+
+Integration, Evaluation &amp; Research Paper
+
+Tue, 05 Jan 2027
+
+10 slides
+
+06
+
+Phase 2 · Review 2 · Final
+
+Final Completion — Viva Ready
+
+Mon, 08 Mar 2027
+
+10 slides
+
+07
+
+Final / Viva Deck
+
+Complete Deck
+
+P2·R2 &amp; Viva-Voce
+
+20 slides
+
+FYP Review Presentation Framework · MVGR CSE
+
+MVGR COLLEGE OF ENGINEERING (AUTONOMOUS)  ·  DEPARTMENT OF COMPUTER SCIENCE &amp; ENGINEERING
+
+[ PROJECT TITLE — FULL FORM ]
+
+Short Form: [ PROJECT SHORT NAME / ACRONYM ]
+
+Phase 1 · Review 1
+
+Project Acceptance Review
+
+ACCEPTANCE GATE
+
+Mon, 13 Jul 2026 · Sem VII
+
+TEAM MEMBER DETAILS  (min. 4 · max. 5)
+
+|   # | Student Name                       | Roll Number             |
+|-----|------------------------------------|-------------------------|
+|   1 | [ Student 1 Name ]                 | [ Roll No. ]            |
+|   2 | [ Student 2 Name ]                 | [ Roll No. ]            |
+|   3 | [ Student 3 Name ]                 | [ Roll No. ]            |
+|   4 | [ Student 4 Name ]                 | [ Roll No. ]            |
+|   5 | [ Student 5 Name — if applicable ] | [ Roll No. — optional ] |
+
+PROJECT GUIDE(S)
+
+[ Guide Name, Designation, Dept. of CSE ]
+
+BATCH
+
+[ Batch Number ]
+
+2023–2027 Batch · B.Tech · Department of Computer Science &amp; Engineering
+
+<!-- image -->
+
+01
+
+Title Slide
+
+PHASE 1 · REVIEW 1 · SLIDE 1 OF 10
+
+ACCEPTANCE GATE
+
+WHAT TO PRESENT
+
+- Project title (full &amp; short form)
+- Team names, roll numbers &amp; guide name(s)
+- Department, institution, date
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Front Matter — Title Page &amp; Declarations
+
+Project Acceptance Review · Mon, 13 Jul 2026
+
+1 / 10
+
+02
+
+Problem Statement
+
+PHASE 1 · REVIEW 1 · SLIDE 2 OF 10
+
+ACCEPTANCE GATE
+
+WHAT TO PRESENT
+
+- What is broken, who suffers, cost of inaction
+- One clear paragraph, no jargon
+- Real data / statistic if available
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Ch 1 §1.2 — Problem Statement
+
+Project Acceptance Review · Mon, 13 Jul 2026
+
+2 / 10
+
+03
+
+Motivation &amp; Need
+
+PHASE 1 · REVIEW 1 · SLIDE 3 OF 10
+
+ACCEPTANCE GATE
+
+WHAT TO PRESENT
+
+- Why this problem matters now
+- Gap in existing tools/approaches
+- Real-world urgency — industry, society, academia
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Ch 1 §1.3 — Motivation
+
+Project Acceptance Review · Mon, 13 Jul 2026
+
+3 / 10
+
+04
+
+Project Objectives
+
+PHASE 1 · REVIEW 1 · SLIDE 4 OF 10
+
+ACCEPTANCE GATE
+
+WHAT TO PRESENT
+
+- 3–5 measurable objectives
+- Each starts with an action verb
+- Must be independently verifiable
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Ch 1 §1.4 — Objectives of the Project
+
+Project Acceptance Review · Mon, 13 Jul 2026
+
+4 / 10
+
+05
+
+Proposed Solution Overview
+
+PHASE 1 · REVIEW 1 · SLIDE 5 OF 10
+
+ACCEPTANCE GATE
+
+WHAT TO PRESENT
+
+- High-level block diagram of the system
+- Main components &amp; how they connect
+- Input → Process → Output flow
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Ch 1 §1.5 — Proposed Approach
+
+Project Acceptance Review · Mon, 13 Jul 2026
+
+5 / 10
+
+06
+
+Scope &amp; Boundaries
+
+PHASE 1 · REVIEW 1 · SLIDE 6 OF 10
+
+ACCEPTANCE GATE
+
+WHAT TO PRESENT
+
+- Two-column: IN scope vs OUT of scope
+- Be specific — prevents scope creep
+- Protects the project at viva
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Ch 1 §1.6 — Scope of the Project
+
+Project Acceptance Review · Mon, 13 Jul 2026
+
+6 / 10
+
+07
+
+Technology Stack (Proposed)
+
+PHASE 1 · REVIEW 1 · SLIDE 7 OF 10
+
+ACCEPTANCE GATE
+
+WHAT TO PRESENT
+
+- Languages, frameworks, libraries, tools, DBs, APIs
+- One-line justification per tool
+- No tool listed without a reason
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Ch 1 §1.7 — Tools &amp; Technologies
+
+Project Acceptance Review · Mon, 13 Jul 2026
+
+7 / 10
+
+08
+
+Initial Literature Survey
+
+PHASE 1 · REVIEW 1 · SLIDE 8 OF 10
+
+ACCEPTANCE GATE
+
+WHAT TO PRESENT
+
+- 3–5 key reference papers
+- Problem addressed · method · result · limitation
+- Seeds Chapter 2
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Ch 2 (Draft) — Literature Review Started
+
+Project Acceptance Review · Mon, 13 Jul 2026
+
+8 / 10
+
+09
+
+Project Plan &amp; Timeline
+
+PHASE 1 · REVIEW 1 · SLIDE 9 OF 10
+
+ACCEPTANCE GATE
+
+WHAT TO PRESENT
+
+- Gantt / milestone chart — all 6 reviews
+- Assign each member to each task
+- This is the team's contract with the supervisor
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Appendix A — Project Plan &amp; Timeline
+
+Project Acceptance Review · Mon, 13 Jul 2026
+
+9 / 10
+
+10
+
+Team Roles &amp; Report Organisation
+
+PHASE 1 · REVIEW 1 · SLIDE 10 OF 10
+
+ACCEPTANCE GATE
+
+WHAT TO PRESENT
+
+- Who owns which module — non-overlapping
+- One sentence per chapter — report outline
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Ch 1 §1.8 — Organisation of the Report
+
+Project Acceptance Review · Mon, 13 Jul 2026
+
+10 / 10
+
+MVGR COLLEGE OF ENGINEERING (AUTONOMOUS)  ·  DEPARTMENT OF COMPUTER SCIENCE &amp; ENGINEERING
+
+[ PROJECT TITLE — FULL FORM ]
+
+Short Form: [ PROJECT SHORT NAME / ACRONYM ]
+
+Phase 1 · Review 2
+
+Literature Review &amp; System Design
+
+STANDARD REVIEW
+
+Mon, 10 Aug 2026 · Sem VII
+
+TEAM MEMBER DETAILS  (min. 4 · max. 5)
+
+|   # | Student Name                       | Roll Number             |
+|-----|------------------------------------|-------------------------|
+|   1 | [ Student 1 Name ]                 | [ Roll No. ]            |
+|   2 | [ Student 2 Name ]                 | [ Roll No. ]            |
+|   3 | [ Student 3 Name ]                 | [ Roll No. ]            |
+|   4 | [ Student 4 Name ]                 | [ Roll No. ]            |
+|   5 | [ Student 5 Name — if applicable ] | [ Roll No. — optional ] |
+
+PROJECT GUIDE(S)
+
+[ Guide Name, Designation, Dept. of CSE ]
+
+BATCH
+
+[ Batch Number ]
+
+2023–2027 Batch · B.Tech · Department of Computer Science &amp; Engineering
+
+<!-- image -->
+
+01
+
+Title &amp; Progress Status
+
+PHASE 1 · REVIEW 2 · SLIDE 1 OF 10
+
+STANDARD REVIEW
+
+WHAT TO PRESENT
+
+- Project title, review number, % progress since R1
+- Modules / tasks completed to date
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Running headers updated
+
+Literature Review &amp; System Design · Mon, 10 Aug 2026
+
+1 / 10
+
+02
+
+R1 Feedback &amp; Actions Taken
+
+PHASE 1 · REVIEW 2 · SLIDE 2 OF 10
+
+STANDARD REVIEW
+
+WHAT TO PRESENT
+
+- Every BATCH remark from R1
+- What changed, how it was addressed, where it's visible
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Ch 1 — Revised per R1 feedback
+
+Literature Review &amp; System Design · Mon, 10 Aug 2026
+
+2 / 10
+
+03
+
+Literature Review Summary
+
+PHASE 1 · REVIEW 2 · SLIDE 3 OF 10
+
+STANDARD REVIEW
+
+WHAT TO PRESENT
+
+- 10–15 papers surveyed
+- Table: Paper | Method | Key Result | Limitation
+- Grouped by sub-topic / approach
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Ch 2 §2.1–2.3 — Literature Review Complete
+
+Literature Review &amp; System Design · Mon, 10 Aug 2026
+
+3 / 10
+
+04
+
+Research Gap Analysis
+
+PHASE 1 · REVIEW 2 · SLIDE 4 OF 10
+
+STANDARD REVIEW
+
+WHAT TO PRESENT
+
+- Gap table — what existing work leaves unsolved
+- Show the logical necessity of the project
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Ch 2 §2.4 — Research Gap &amp; Justification
+
+Literature Review &amp; System Design · Mon, 10 Aug 2026
+
+4 / 10
+
+05
+
+Refined Problem Statement
+
+PHASE 1 · REVIEW 2 · SLIDE 5 OF 10
+
+STANDARD REVIEW
+
+WHAT TO PRESENT
+
+- Updated, literature-informed version
+- More precise &amp; technical than R1
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Ch 1 §1.2 (rev) — Problem Statement Refined
+
+Literature Review &amp; System Design · Mon, 10 Aug 2026
+
+5 / 10
+
+06
+
+System Architecture
+
+PHASE 1 · REVIEW 2 · SLIDE 6 OF 10
+
+STANDARD REVIEW
+
+WHAT TO PRESENT
+
+- Full architecture diagram — all components
+- Data flows &amp; interfaces labelled
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Ch 3 §3.1 — System Architecture
+
+Literature Review &amp; System Design · Mon, 10 Aug 2026
+
+6 / 10
+
+07
+
+Module Breakdown
+
+PHASE 1 · REVIEW 2 · SLIDE 7 OF 10
+
+STANDARD REVIEW
+
+WHAT TO PRESENT
+
+- Each module — function, inputs, outputs
+- Ownership: which member builds which
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Ch 3 §3.2 — Module Design
+
+Literature Review &amp; System Design · Mon, 10 Aug 2026
+
+7 / 10
+
+08
+
+Data Flow &amp; Database Design
+
+PHASE 1 · REVIEW 2 · SLIDE 8 OF 10
+
+STANDARD REVIEW
+
+WHAT TO PRESENT
+
+- DFD Level 0 &amp; Level 1
+- ER diagram &amp; schema table
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Ch 3 §3.3 — Data Flow &amp; Database Design
+
+Literature Review &amp; System Design · Mon, 10 Aug 2026
+
+8 / 10
+
+09
+
+Technology Stack — Final
+
+PHASE 1 · REVIEW 2 · SLIDE 9 OF 10
+
+STANDARD REVIEW
+
+WHAT TO PRESENT
+
+- Confirmed tools with setup evidence
+- Version numbers; explain any change from R1
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Ch 3 §3.4 — Technology Stack (Final)
+
+Literature Review &amp; System Design · Mon, 10 Aug 2026
+
+9 / 10
+
+10
+
+Interface &amp; API Design + Work Plan
+
+PHASE 1 · REVIEW 2 · SLIDE 10 OF 10
+
+STANDARD REVIEW
+
+WHAT TO PRESENT
+
+- Wireframes / UI sketches for major screens
+- Endpoint list (if API-based)
+- Work done since R1 &amp; plan through R3
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Ch 3 §3.5 — Interface &amp; API Design
+
+Literature Review &amp; System Design · Mon, 10 Aug 2026
+
+10 / 10
+
+MVGR COLLEGE OF ENGINEERING (AUTONOMOUS)  ·  DEPARTMENT OF COMPUTER SCIENCE &amp; ENGINEERING
+
+[ PROJECT TITLE — FULL FORM ]
+
+Short Form: [ PROJECT SHORT NAME / ACRONYM ]
+
+Phase 1 · Review 3
+
+Implementation Phase I — Core Modules
+
+WORKING PROTOTYPE REQUIRED
+
+Mon, 14 Sep 2026 · Sem VII
+
+TEAM MEMBER DETAILS  (min. 4 · max. 5)
+
+|   # | Student Name                       | Roll Number             |
+|-----|------------------------------------|-------------------------|
+|   1 | [ Student 1 Name ]                 | [ Roll No. ]            |
+|   2 | [ Student 2 Name ]                 | [ Roll No. ]            |
+|   3 | [ Student 3 Name ]                 | [ Roll No. ]            |
+|   4 | [ Student 4 Name ]                 | [ Roll No. ]            |
+|   5 | [ Student 5 Name — if applicable ] | [ Roll No. — optional ] |
+
+PROJECT GUIDE(S)
+
+[ Guide Name, Designation, Dept. of CSE ]
+
+BATCH
+
+[ Batch Number ]
+
+2023–2027 Batch · B.Tech · Department of Computer Science &amp; Engineering
+
+<!-- image -->
+
+01
+
+Title &amp; Module Status Dashboard
+
+PHASE 1 · REVIEW 3 · SLIDE 1 OF 10
+
+WORKING PROTOTYPE REQUIRED
+
+WHAT TO PRESENT
+
+- Modules completed, % implemented
+- Visual progress board
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Ch 4 — Implementation Progress Table
+
+Implementation Phase I — Core Modules · Mon, 14 Sep 2026
+
+1 / 10
+
+02
+
+R2 Feedback &amp; Actions Taken
+
+PHASE 1 · REVIEW 3 · SLIDE 2 OF 10
+
+WORKING PROTOTYPE REQUIRED
+
+WHAT TO PRESENT
+
+- Every R2 BATCH remark resolved
+- Design changes reflected in updated diagrams
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Ch 3 — Finalised per R2 feedback
+
+Implementation Phase I — Core Modules · Mon, 14 Sep 2026
+
+2 / 10
+
+03
+
+System Architecture — Final
+
+PHASE 1 · REVIEW 3 · SLIDE 3 OF 10
+
+WORKING PROTOTYPE REQUIRED
+
+WHAT TO PRESENT
+
+- Confirmed architecture after implementation began
+- Explain any changes from R2 design
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Ch 3 §3.1 (final) — Architecture Diagram
+
+Implementation Phase I — Core Modules · Mon, 14 Sep 2026
+
+3 / 10
+
+04
+
+Modules Implemented — Code Walkthrough
+
+PHASE 1 · REVIEW 3 · SLIDE 4 OF 10
+
+WORKING PROTOTYPE REQUIRED
+
+WHAT TO PRESENT
+
+- Core logic per module — key function / algorithm
+- Real input → output, screenshot or live demo
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Ch 4 §4.1–4.n — Implementation, Module-wise
+
+Implementation Phase I — Core Modules · Mon, 14 Sep 2026
+
+4 / 10
+
+05
+
+Live Demo — Core Functionality
+
+PHASE 1 · REVIEW 3 · SLIDE 5 OF 10
+
+WORKING PROTOTYPE REQUIRED
+
+WHAT TO PRESENT
+
+- Working demo of at least the core module
+- Real data in, real output shown
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Ch 4 §4.n+1 — Demonstration Evidence
+
+Implementation Phase I — Core Modules · Mon, 14 Sep 2026
+
+5 / 10
+
+06
+
+Database Implementation
+
+PHASE 1 · REVIEW 3 · SLIDE 6 OF 10
+
+WORKING PROTOTYPE REQUIRED
+
+WHAT TO PRESENT
+
+- Final schema with actual table screenshots
+- Sample real data records
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Ch 3 §3.3 (final) — Database Design
+
+Implementation Phase I — Core Modules · Mon, 14 Sep 2026
+
+6 / 10
+
+07
+
+API &amp; Interface Implementation
+
+PHASE 1 · REVIEW 3 · SLIDE 7 OF 10
+
+WORKING PROTOTYPE REQUIRED
+
+WHAT TO PRESENT
+
+- Confirmed endpoints working with real data
+- Actual UI screenshots (not wireframes)
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Ch 3 §3.5 (final) — Interface &amp; API Design
+
+Implementation Phase I — Core Modules · Mon, 14 Sep 2026
+
+7 / 10
+
+08
+
+Unit Test Results
+
+PHASE 1 · REVIEW 3 · SLIDE 8 OF 10
+
+WORKING PROTOTYPE REQUIRED
+
+WHAT TO PRESENT
+
+- Test cases written &amp; executed
+- Pass/fail table, code coverage %
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Ch 5 §5.1 — Unit Testing
+
+Implementation Phase I — Core Modules · Mon, 14 Sep 2026
+
+8 / 10
+
+09
+
+Implementation Challenges &amp; Solutions
+
+PHASE 1 · REVIEW 3 · SLIDE 9 OF 10
+
+WORKING PROTOTYPE REQUIRED
+
+WHAT TO PRESENT
+
+- Technical problems encountered &amp; how solved
+- Shows real engineering judgement
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Ch 4 §4.last — Challenges &amp; Decisions
+
+Implementation Phase I — Core Modules · Mon, 14 Sep 2026
+
+9 / 10
+
+10
+
+Plan for Review 4
+
+PHASE 1 · REVIEW 3 · SLIDE 10 OF 10
+
+WORKING PROTOTYPE REQUIRED
+
+WHAT TO PRESENT
+
+- Remaining modules, integration plan, testing strategy
+- Specific dates for each task
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Appendix A — Project Plan Updated
+
+Implementation Phase I — Core Modules · Mon, 14 Sep 2026
+
+10 / 10
+
+MVGR COLLEGE OF ENGINEERING (AUTONOMOUS)  ·  DEPARTMENT OF COMPUTER SCIENCE &amp; ENGINEERING
+
+[ PROJECT TITLE — FULL FORM ]
+
+Short Form: [ PROJECT SHORT NAME / ACRONYM ]
+
+Phase 1 · Review 4
+
+Implementation Phase II &amp; Phase 1 Completion Gate
+
+PHASE 1 COMPLETION GATE
+
+Mon, 05 Oct 2026 · Sem VII
+
+TEAM MEMBER DETAILS  (min. 4 · max. 5)
+
+|   # | Student Name                       | Roll Number             |
+|-----|------------------------------------|-------------------------|
+|   1 | [ Student 1 Name ]                 | [ Roll No. ]            |
+|   2 | [ Student 2 Name ]                 | [ Roll No. ]            |
+|   3 | [ Student 3 Name ]                 | [ Roll No. ]            |
+|   4 | [ Student 4 Name ]                 | [ Roll No. ]            |
+|   5 | [ Student 5 Name — if applicable ] | [ Roll No. — optional ] |
+
+PROJECT GUIDE(S)
+
+[ Guide Name, Designation, Dept. of CSE ]
+
+BATCH
+
+[ Batch Number ]
+
+2023–2027 Batch · B.Tech · Department of Computer Science &amp; Engineering
+
+<!-- image -->
+
+01
+
+Phase 1 Summary Dashboard
+
+PHASE 1 · REVIEW 4 · SLIDE 1 OF 10
+
+PHASE 1 COMPLETION GATE
+
+WHAT TO PRESENT
+
+- All modules status, features completed
+- Overall progress % &amp; feature completion matrix
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Abstract — First Draft
+
+Implementation Phase II &amp; Phase 1 Completion Gate · Mon, 05 Oct 2026
+
+1 / 10
+
+02
+
+R3 Feedback &amp; Actions Taken
+
+PHASE 1 · REVIEW 4 · SLIDE 2 OF 10
+
+PHASE 1 COMPLETION GATE
+
+WHAT TO PRESENT
+
+- All R3 BATCH remarks resolved with evidence
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+All Chapters — Updated per R3 Feedback
+
+Implementation Phase II &amp; Phase 1 Completion Gate · Mon, 05 Oct 2026
+
+2 / 10
+
+03
+
+Full System Demo — End to End
+
+PHASE 1 · REVIEW 4 · SLIDE 3 OF 10
+
+PHASE 1 COMPLETION GATE
+
+WHAT TO PRESENT
+
+- Complete integrated demo — all Phase 1 modules together
+- Real data flows through all components
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Ch 4 — Implementation Complete
+
+Implementation Phase II &amp; Phase 1 Completion Gate · Mon, 05 Oct 2026
+
+3 / 10
+
+04
+
+Integration Test Results
+
+PHASE 1 · REVIEW 4 · SLIDE 4 OF 10
+
+PHASE 1 COMPLETION GATE
+
+WHAT TO PRESENT
+
+- How modules connect — integration test results
+- API contracts verified
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Ch 5 §5.2 — Integration Testing
+
+Implementation Phase II &amp; Phase 1 Completion Gate · Mon, 05 Oct 2026
+
+4 / 10
+
+05
+
+System Test Results — Full Suite
+
+PHASE 1 · REVIEW 4 · SLIDE 5 OF 10
+
+PHASE 1 COMPLETION GATE
+
+WHAT TO PRESENT
+
+- Functional &amp; non-functional testing
+- Performance under load, error handling, security basics
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Ch 5 §5.3 — System &amp; Functional Testing
+
+Implementation Phase II &amp; Phase 1 Completion Gate · Mon, 05 Oct 2026
+
+5 / 10
+
+06
+
+Performance Metrics
+
+PHASE 1 · REVIEW 4 · SLIDE 6 OF 10
+
+PHASE 1 COMPLETION GATE
+
+WHAT TO PRESENT
+
+- Speed, accuracy, throughput vs R1 targets
+- Charts / tables; explain any shortfall
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Ch 5 §5.4 — Performance Evaluation
+
+Implementation Phase II &amp; Phase 1 Completion Gate · Mon, 05 Oct 2026
+
+6 / 10
+
+07
+
+Known Issues &amp; Phase 2 Resolutions
+
+PHASE 1 · REVIEW 4 · SLIDE 7 OF 10
+
+PHASE 1 COMPLETION GATE
+
+WHAT TO PRESENT
+
+- Honest list of what doesn't yet work
+- Root cause &amp; Phase 2 resolution plan
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Ch 4 §4.known — Known Limitations (Current)
+
+Implementation Phase II &amp; Phase 1 Completion Gate · Mon, 05 Oct 2026
+
+7 / 10
+
+08
+
+Objectives vs. Outcomes Check
+
+PHASE 1 · REVIEW 4 · SLIDE 8 OF 10
+
+PHASE 1 COMPLETION GATE
+
+WHAT TO PRESENT
+
+- Each R1 objective: Achieved / Partial / Pending
+- The accountability slide
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Ch 6 §6.1 (draft) — Results vs. Objectives
+
+Implementation Phase II &amp; Phase 1 Completion Gate · Mon, 05 Oct 2026
+
+8 / 10
+
+09
+
+Phase 2 Plan
+
+PHASE 1 · REVIEW 4 · SLIDE 9 OF 10
+
+PHASE 1 COMPLETION GATE
+
+WHAT TO PRESENT
+
+- Detailed Sem VIII plan with specific dates
+- Paper submission, thesis completion, viva prep
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Appendix A — Phase 2 Timeline
+
+Implementation Phase II &amp; Phase 1 Completion Gate · Mon, 05 Oct 2026
+
+9 / 10
+
+10
+
+Thesis Completion Status
+
+PHASE 1 · REVIEW 4 · SLIDE 10 OF 10
+
+PHASE 1 COMPLETION GATE
+
+WHAT TO PRESENT
+
+- Chapter approval checklist — supervisor sign-off status
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Chapter Approval Record + Abstract Draft
+
+Implementation Phase II &amp; Phase 1 Completion Gate · Mon, 05 Oct 2026
+
+10 / 10
+
+MVGR COLLEGE OF ENGINEERING (AUTONOMOUS)  ·  DEPARTMENT OF COMPUTER SCIENCE &amp; ENGINEERING
+
+[ PROJECT TITLE — FULL FORM ]
+
+Short Form: [ PROJECT SHORT NAME / ACRONYM ]
+
+Phase 2 · Review 1
+
+Integration, Evaluation &amp; Research Paper
+
+RESEARCH PAPER MANDATORY
+
+Tue, 05 Jan 2027 · Sem VIII
+
+TEAM MEMBER DETAILS  (min. 4 · max. 5)
+
+|   # | Student Name                       | Roll Number             |
+|-----|------------------------------------|-------------------------|
+|   1 | [ Student 1 Name ]                 | [ Roll No. ]            |
+|   2 | [ Student 2 Name ]                 | [ Roll No. ]            |
+|   3 | [ Student 3 Name ]                 | [ Roll No. ]            |
+|   4 | [ Student 4 Name ]                 | [ Roll No. ]            |
+|   5 | [ Student 5 Name — if applicable ] | [ Roll No. — optional ] |
+
+PROJECT GUIDE(S)
+
+[ Guide Name, Designation, Dept. of CSE ]
+
+BATCH
+
+[ Batch Number ]
+
+2023–2027 Batch · B.Tech · Department of Computer Science &amp; Engineering
+
+<!-- image -->
+
+01
+
+Phase 2 Overview &amp; Phase 1 Outcomes
+
+PHASE 2 · REVIEW 1 · SLIDE 1 OF 10
+
+RESEARCH PAPER MANDATORY
+
+WHAT TO PRESENT
+
+- Phase 2 scope &amp; new targets
+- Summary of Phase 1 deliverables
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Ch 1 §1.9 — Phase 2 Scope &amp; Additions
+
+Integration, Evaluation &amp; Research Paper · Tue, 05 Jan 2027
+
+1 / 10
+
+02
+
+P1·R4 Feedback &amp; Phase 1 Resolutions
+
+PHASE 2 · REVIEW 1 · SLIDE 2 OF 10
+
+RESEARCH PAPER MANDATORY
+
+WHAT TO PRESENT
+
+- All Phase 1 feedback fully resolved
+- Entering Phase 2 with a clean slate
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Phase 1 Chapters — Final Approved
+
+Integration, Evaluation &amp; Research Paper · Tue, 05 Jan 2027
+
+2 / 10
+
+03
+
+Full Integrated System Demo
+
+PHASE 2 · REVIEW 1 · SLIDE 3 OF 10
+
+RESEARCH PAPER MANDATORY
+
+WHAT TO PRESENT
+
+- All modules integrated + Phase 2 additions
+- Full end-to-end user flow, edge cases handled
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Ch 4 (final) — All Modules Final
+
+Integration, Evaluation &amp; Research Paper · Tue, 05 Jan 2027
+
+3 / 10
+
+04
+
+Integration Architecture (Final)
+
+PHASE 2 · REVIEW 1 · SLIDE 4 OF 10
+
+RESEARCH PAPER MANDATORY
+
+WHAT TO PRESENT
+
+- How all modules wire together — sequence diagrams
+- API contracts, complete data flow
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Ch 3 §3.6 — Integration Architecture
+
+Integration, Evaluation &amp; Research Paper · Tue, 05 Jan 2027
+
+4 / 10
+
+05
+
+Novel Module / Research Contribution Demo
+
+PHASE 2 · REVIEW 1 · SLIDE 5 OF 10
+
+RESEARCH PAPER MANDATORY
+
+WHAT TO PRESENT
+
+- The module unique to this project's research
+- Demonstrated live with real results
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Ch 4 §4.novel — Novel Contribution Implementation
+
+Integration, Evaluation &amp; Research Paper · Tue, 05 Jan 2027
+
+5 / 10
+
+06
+
+Full Test Suite Results
+
+PHASE 2 · REVIEW 1 · SLIDE 6 OF 10
+
+RESEARCH PAPER MANDATORY
+
+WHAT TO PRESENT
+
+- Unit, integration, system, performance, security, usability
+- All metrics against targets
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Ch 5 (complete) — Testing &amp; Evaluation
+
+Integration, Evaluation &amp; Research Paper · Tue, 05 Jan 2027
+
+6 / 10
+
+07
+
+Quantitative Evaluation Results
+
+PHASE 2 · REVIEW 1 · SLIDE 7 OF 10
+
+RESEARCH PAPER MANDATORY
+
+WHAT TO PRESENT
+
+- Precision, recall, F1, accuracy, throughput, UX score
+- Charts &amp; tables — same data used in the paper
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Ch 6 §6.2 — Quantitative Results
+
+Integration, Evaluation &amp; Research Paper · Tue, 05 Jan 2027
+
+7 / 10
+
+08
+
+Research Paper Draft
+
+PHASE 2 · REVIEW 1 · SLIDE 8 OF 10
+
+RESEARCH PAPER MANDATORY
+
+WHAT TO PRESENT
+
+- Title, abstract, 3 contributions, target venue named
+- Supervisor listed as co-author
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Appendix B — Research Paper Draft
+
+Integration, Evaluation &amp; Research Paper · Tue, 05 Jan 2027
+
+8 / 10
+
+09
+
+Originality Report — Thesis &amp; System
+
+PHASE 2 · REVIEW 1 · SLIDE 9 OF 10
+
+RESEARCH PAPER MANDATORY
+
+WHAT TO PRESENT
+
+- Thesis similarity score (target &lt;15%)
+- System output originality evidence
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Appendix C — Originality Report
+
+Integration, Evaluation &amp; Research Paper · Tue, 05 Jan 2027
+
+9 / 10
+
+10
+
+Final Review Plan &amp; Viva Timeline
+
+PHASE 2 · REVIEW 1 · SLIDE 10 OF 10
+
+RESEARCH PAPER MANDATORY
+
+WHAT TO PRESENT
+
+- Paper completion, thesis polishing, viva prep dates
+- Working backward from Viva-Voce
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Appendix A (final) — Timeline to Viva
+
+Integration, Evaluation &amp; Research Paper · Tue, 05 Jan 2027
+
+10 / 10
+
+MVGR COLLEGE OF ENGINEERING (AUTONOMOUS)  ·  DEPARTMENT OF COMPUTER SCIENCE &amp; ENGINEERING
+
+[ PROJECT TITLE — FULL FORM ]
+
+Short Form: [ PROJECT SHORT NAME / ACRONYM ]
+
+Phase 2 · Review 2 · Final
+
+Final Completion — Viva Ready
+
+FINAL GATE · VIVA IN 3 WEEKS
+
+Mon, 08 Mar 2027 · Sem VIII
+
+TEAM MEMBER DETAILS  (min. 4 · max. 5)
+
+|   # | Student Name                       | Roll Number             |
+|-----|------------------------------------|-------------------------|
+|   1 | [ Student 1 Name ]                 | [ Roll No. ]            |
+|   2 | [ Student 2 Name ]                 | [ Roll No. ]            |
+|   3 | [ Student 3 Name ]                 | [ Roll No. ]            |
+|   4 | [ Student 4 Name ]                 | [ Roll No. ]            |
+|   5 | [ Student 5 Name — if applicable ] | [ Roll No. — optional ] |
+
+PROJECT GUIDE(S)
+
+[ Guide Name, Designation, Dept. of CSE ]
+
+BATCH
+
+[ Batch Number ]
+
+2023–2027 Batch · B.Tech · Department of Computer Science &amp; Engineering
+
+<!-- image -->
+
+01
+
+Title &amp; Final Project Summary
+
+PHASE 2 · REVIEW 2 · FINAL · SLIDE 1 OF 10
+
+FINAL GATE · VIVA IN 3 WEEKS
+
+WHAT TO PRESENT
+
+- Project title, complete feature list, team, paper status
+- Opening slide of the viva
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Title Page — Final Version
+
+Final Completion — Viva Ready · Mon, 08 Mar 2027
+
+1 / 10
+
+02
+
+P2·R1 Feedback &amp; Final Resolutions
+
+PHASE 2 · REVIEW 2 · FINAL · SLIDE 2 OF 10
+
+FINAL GATE · VIVA IN 3 WEEKS
+
+WHAT TO PRESENT
+
+- Every P2·R1 remark resolved
+- Supervisor sign-off obtained on all chapters
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+All Chapters — Final Revisions Complete
+
+Final Completion — Viva Ready · Mon, 08 Mar 2027
+
+2 / 10
+
+03
+
+Complete System Demo — Final
+
+PHASE 2 · REVIEW 2 · FINAL · SLIDE 3 OF 10
+
+FINAL GATE · VIVA IN 3 WEEKS
+
+WHAT TO PRESENT
+
+- Full demo incl. edge cases &amp; error handling
+- Practise until seamless — this is the viva demo
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Ch 4 (bound) — Implementation, Bound Version
+
+Final Completion — Viva Ready · Mon, 08 Mar 2027
+
+3 / 10
+
+04
+
+Final Evaluation Results — All Metrics
+
+PHASE 2 · REVIEW 2 · FINAL · SLIDE 4 OF 10
+
+FINAL GATE · VIVA IN 3 WEEKS
+
+WHAT TO PRESENT
+
+- All primary metrics — final values
+- Charts show improvement across phases
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Ch 6 §6.2 (final) — Quantitative Results
+
+Final Completion — Viva Ready · Mon, 08 Mar 2027
+
+4 / 10
+
+05
+
+Comparison with Existing Work
+
+PHASE 2 · REVIEW 2 · FINAL · SLIDE 5 OF 10
+
+FINAL GATE · VIVA IN 3 WEEKS
+
+WHAT TO PRESENT
+
+- System vs. 3–4 tools from literature review
+- Comparison table on key metrics
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Ch 6 §6.3 — Comparison with Related Work
+
+Final Completion — Viva Ready · Mon, 08 Mar 2027
+
+5 / 10
+
+06
+
+Originality Report — Final Thesis
+
+PHASE 2 · REVIEW 2 · FINAL · SLIDE 6 OF 10
+
+FINAL GATE · VIVA IN 3 WEEKS
+
+WHAT TO PRESENT
+
+- Final plagiarism check of the complete thesis
+- Target: below 15% similarity
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Appendix C (final) — Originality Certificate
+
+Final Completion — Viva Ready · Mon, 08 Mar 2027
+
+6 / 10
+
+07
+
+Research Paper Status
+
+PHASE 2 · REVIEW 2 · FINAL · SLIDE 7 OF 10
+
+FINAL GATE · VIVA IN 3 WEEKS
+
+WHAT TO PRESENT
+
+- Submitted / under review / accepted
+- Attach acknowledgement or acceptance proof
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Appendix B (final) — Paper Final / Submitted
+
+Final Completion — Viva Ready · Mon, 08 Mar 2027
+
+7 / 10
+
+08
+
+Research Contributions Summary
+
+PHASE 2 · REVIEW 2 · FINAL · SLIDE 8 OF 10
+
+FINAL GATE · VIVA IN 3 WEEKS
+
+WHAT TO PRESENT
+
+- 3–5 specific, defensible contribution claims
+- Each matched to an objective — viva talking points
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Ch 7 §7.1 — Contributions of this Work
+
+Final Completion — Viva Ready · Mon, 08 Mar 2027
+
+8 / 10
+
+09
+
+Limitations &amp; Future Work
+
+PHASE 2 · REVIEW 2 · FINAL · SLIDE 9 OF 10
+
+FINAL GATE · VIVA IN 3 WEEKS
+
+WHAT TO PRESENT
+
+- Honest, specific current limitations
+- 3–5 concrete future research directions
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Ch 7 §7.2–7.3 — Limitations &amp; Future Work
+
+Final Completion — Viva Ready · Mon, 08 Mar 2027
+
+9 / 10
+
+10
+
+Viva Preparation Summary
+
+PHASE 2 · REVIEW 2 · FINAL · SLIDE 10 OF 10
+
+FINAL GATE · VIVA IN 3 WEEKS
+
+WHAT TO PRESENT
+
+- Key talking points &amp; 10 likely viva Q&amp;A
+- Each member's area of responsibility
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+MAPS TO THESIS
+
+Abstract (final) — 250-word Final Abstract
+
+Final Completion — Viva Ready · Mon, 08 Mar 2027
+
+10 / 10
+
+MVGR COLLEGE OF ENGINEERING (AUTONOMOUS)  ·  DEPARTMENT OF COMPUTER SCIENCE &amp; ENGINEERING
+
+[ PROJECT TITLE — FULL FORM ]
+
+Short Form: [ PROJECT SHORT NAME / ACRONYM ]
+
+Phase 2 · Review 2 · Final / Viva-Voce
+
+Final Presentation — Complete Deck
+
+FINAL DECK
+
+08 Mar 2027 · Viva: 29 Mar – 03 Apr 2027 · Sem VIII
+
+TEAM MEMBER DETAILS  (min. 4 · max. 5)
+
+|   # | Student Name                       | Roll Number             |
+|-----|------------------------------------|-------------------------|
+|   1 | [ Student 1 Name ]                 | [ Roll No. ]            |
+|   2 | [ Student 2 Name ]                 | [ Roll No. ]            |
+|   3 | [ Student 3 Name ]                 | [ Roll No. ]            |
+|   4 | [ Student 4 Name ]                 | [ Roll No. ]            |
+|   5 | [ Student 5 Name — if applicable ] | [ Roll No. — optional ] |
+
+PROJECT GUIDE(S)
+
+[ Guide Name, Designation, Dept. of CSE ]
+
+BATCH
+
+[ Batch Number ]
+
+2023–2027 Batch · B.Tech · Department of Computer Science &amp; Engineering
+
+<!-- image -->
+
+01
+
+Title Slide
+
+PART 1 — OPENING · ~5 min
+
+PULL
+
+WHAT TO PRESENT
+
+- Project full title &amp; short form · Team names &amp; roll numbers
+- Guide name(s) · Department · Institution · Viva date
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+SOURCED FROM
+
+Front Matter — Title Page (Bound Thesis)
+
+Final Presentation — Complete Deck · P2·R2 &amp; Viva-Voce
+
+1 / 20
+
+02
+
+Problem Statement &amp; Motivation
+
+PART 1 — OPENING · ~5 min
+
+REFINE
+
+WHAT TO PRESENT
+
+- Crisp problem statement (2–3 lines) · why it matters
+- Real statistic or citation to anchor credibility
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+SOURCED FROM
+
+Ch 1 §1.2–1.3
+
+Final Presentation — Complete Deck · P2·R2 &amp; Viva-Voce
+
+2 / 20
+
+03
+
+Objectives &amp; Scope
+
+PART 1 — OPENING · ~5 min
+
+PULL
+
+WHAT TO PRESENT
+
+- The exact 3–5 objectives from P1·R1 — unchanged
+- In/Out scope table
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+SOURCED FROM
+
+Ch 1 §1.4–1.6
+
+Final Presentation — Complete Deck · P2·R2 &amp; Viva-Voce
+
+3 / 20
+
+04
+
+Literature Review Summary
+
+PART 2 — LITERATURE &amp; SYSTEM DESIGN · ~8 min
+
+CONDENSE
+
+WHAT TO PRESENT
+
+- Condensed survey table — top 5–8 most relevant papers
+- Research gap clearly identified
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+SOURCED FROM
+
+Ch 2 §2.2–2.4
+
+Final Presentation — Complete Deck · P2·R2 &amp; Viva-Voce
+
+4 / 20
+
+05
+
+System Architecture (Final)
+
+PART 2 — LITERATURE &amp; SYSTEM DESIGN · ~8 min
+
+PULL
+
+WHAT TO PRESENT
+
+- The final confirmed architecture diagram
+- Every component &amp; connection labelled
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+SOURCED FROM
+
+Ch 3 §3.1
+
+Final Presentation — Complete Deck · P2·R2 &amp; Viva-Voce
+
+5 / 20
+
+06
+
+Technology Stack &amp; Database Design
+
+PART 2 — LITERATURE &amp; SYSTEM DESIGN · ~8 min
+
+PULL
+
+WHAT TO PRESENT
+
+- Final tools with version numbers &amp; justification
+- ER diagram / schema summary
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+SOURCED FROM
+
+Ch 3 §3.3–3.4
+
+Final Presentation — Complete Deck · P2·R2 &amp; Viva-Voce
+
+6 / 20
+
+07
+
+Module Breakdown &amp; Data Flow
+
+PART 2 — LITERATURE &amp; SYSTEM DESIGN · ~8 min
+
+PULL
+
+WHAT TO PRESENT
+
+- Key modules &amp; their interactions
+- DFD Level 1 or sequence diagram
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+SOURCED FROM
+
+Ch 3 §3.2–3.3
+
+Final Presentation — Complete Deck · P2·R2 &amp; Viva-Voce
+
+7 / 20
+
+08
+
+Implementation Overview — All Modules
+
+PART 3 — BUILD &amp; DEMO · ~10 min
+
+ASSEMBLE
+
+WHAT TO PRESENT
+
+- Module completion matrix — status &amp; owner
+- One-slide overview before diving into demos
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+SOURCED FROM
+
+Ch 4 progress table
+
+Final Presentation — Complete Deck · P2·R2 &amp; Viva-Voce
+
+8 / 20
+
+09
+
+Key Module Walkthrough
+
+PART 3 — BUILD &amp; DEMO · ~10 min
+
+SELECT
+
+WHAT TO PRESENT
+
+- 2–3 most important modules — core logic + output
+- Code snippet + screenshot per module
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+SOURCED FROM
+
+Ch 4 §4.1–4.n
+
+Final Presentation — Complete Deck · P2·R2 &amp; Viva-Voce
+
+9 / 20
+
+10
+
+Novel Contribution — Deep Dive
+
+PART 3 — BUILD &amp; DEMO · ~10 min
+
+FOCUS
+
+WHAT TO PRESENT
+
+- The module that makes this project original
+- Demonstrated with real input → output
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+SOURCED FROM
+
+Ch 4 §4.novel + Paper §3
+
+Final Presentation — Complete Deck · P2·R2 &amp; Viva-Voce
+
+10 / 20
+
+11
+
+Full System Demo — End to End
+
+PART 3 — BUILD &amp; DEMO · ~10 min
+
+RECORD
+
+WHAT TO PRESENT
+
+- Complete user journey, real data, edge cases handled
+- Live demo or recorded video screenshots
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+SOURCED FROM
+
+Ch 4 demo figures
+
+Final Presentation — Complete Deck · P2·R2 &amp; Viva-Voce
+
+11 / 20
+
+12
+
+Testing Results Summary
+
+PART 4 — RESULTS, EVALUATION &amp; COMPARISON · ~8 min
+
+PULL
+
+WHAT TO PRESENT
+
+- Unit, integration, system, performance — single summary table
+- Overall system pass rate
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+SOURCED FROM
+
+Ch 5 §5.1–5.4
+
+Final Presentation — Complete Deck · P2·R2 &amp; Viva-Voce
+
+12 / 20
+
+13
+
+Quantitative Evaluation — Key Metrics
+
+PART 4 — RESULTS, EVALUATION &amp; COMPARISON · ~8 min
+
+PULL
+
+WHAT TO PRESENT
+
+- Bar charts / tables: precision, recall, F1, accuracy...
+- Final values vs. target values from objectives
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+SOURCED FROM
+
+Ch 5 §5.5 + Ch 6 §6.2 + Paper Results
+
+Final Presentation — Complete Deck · P2·R2 &amp; Viva-Voce
+
+13 / 20
+
+14
+
+Objectives Achievement Table
+
+PART 4 — RESULTS, EVALUATION &amp; COMPARISON · ~8 min
+
+PULL
+
+WHAT TO PRESENT
+
+- Each R1 objective: Target | Achieved | Evidence
+- The BATCH's score card
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+SOURCED FROM
+
+Ch 6 §6.1
+
+Final Presentation — Complete Deck · P2·R2 &amp; Viva-Voce
+
+14 / 20
+
+15
+
+Comparison with Existing Work
+
+PART 4 — RESULTS, EVALUATION &amp; COMPARISON · ~8 min
+
+PULL
+
+WHAT TO PRESENT
+
+- System vs. 3–4 tools from the literature review
+- Justifies the novelty claim
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+SOURCED FROM
+
+Ch 6 §6.3 + Paper Results §4
+
+Final Presentation — Complete Deck · P2·R2 &amp; Viva-Voce
+
+15 / 20
+
+16
+
+Research Contributions
+
+PART 5 — CONTRIBUTIONS, LIMITATIONS &amp; CLOSE · ~5 min
+
+PULL
+
+WHAT TO PRESENT
+
+- 3–5 numbered, specific, defensible claims
+- Each connected to one R1 objective
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+SOURCED FROM
+
+Ch 7 §7.1 + Paper Abstract
+
+Final Presentation — Complete Deck · P2·R2 &amp; Viva-Voce
+
+16 / 20
+
+17
+
+Limitations &amp; Future Work
+
+PART 5 — CONTRIBUTIONS, LIMITATIONS &amp; CLOSE · ~5 min
+
+PULL
+
+WHAT TO PRESENT
+
+- Specific limitations of the current system
+- 3–5 concrete future directions
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+SOURCED FROM
+
+Ch 7 §7.2–7.3
+
+Final Presentation — Complete Deck · P2·R2 &amp; Viva-Voce
+
+17 / 20
+
+18
+
+Research Paper &amp; Originality
+
+PART 5 — CONTRIBUTIONS, LIMITATIONS &amp; CLOSE · ~5 min
+
+PULL
+
+WHAT TO PRESENT
+
+- Paper title, target venue, submission/acceptance status
+- Thesis originality score
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+SOURCED FROM
+
+Appendix B + Appendix C
+
+Final Presentation — Complete Deck · P2·R2 &amp; Viva-Voce
+
+18 / 20
+
+19
+
+Conclusion — What this Work Means
+
+PART 5 — CONTRIBUTIONS, LIMITATIONS &amp; CLOSE · ~5 min
+
+WRITE
+
+WHAT TO PRESENT
+
+- What this project achieved &amp; why it matters
+- The "so what?" slide — one clear paragraph
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+SOURCED FROM
+
+Ch 7 §7.4
+
+Final Presentation — Complete Deck · P2·R2 &amp; Viva-Voce
+
+19 / 20
+
+20
+
+Thank You &amp; Q&amp;A
+
+PART 5 — CONTRIBUTIONS, LIMITATIONS &amp; CLOSE · ~5 min
+
+CLOSE
+
+WHAT TO PRESENT
+
+- Project title · Team members · Guide name
+- "Thank you for your attention." — then stop
+
+INSERT DIAGRAM / TABLE / SCREENSHOT HERE
+
+SOURCED FROM
+
+All chapters — ready for Q&amp;A
+
+Final Presentation — Complete Deck · P2·R2 &amp; Viva-Voce
+
+20 / 20
