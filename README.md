@@ -265,17 +265,27 @@ Each run produces:
 
 ---
 
-## Expected Runtime
+## Execution & Runtime Performance
 
-| Dataset | Per Seed | With 3 Parallel Workers |
-|---------|----------|------------------------|
-| Small (<3K) | ~2-3 min | ~3 min wall-clock |
-| Medium (3-15K) | ~5-8 min | ~8 min wall-clock |
-| Large (>15K) | ~15-25 min | ~25 min wall-clock |
+### Estimated vs. Measured Runtimes
 
-**Total: ~2-3 hours** for 10 datasets × 3 seeds on 16-thread CPU.
+*Note: Initial planning estimates assumed GPU-like speed. Actual benchmark execution on a 16-thread CPU (Intel i5-12500H, 3 parallel worker processes) yielded the following measured runtimes:*
+
+| Dataset Category | Initial Estimate | Actual Measured Time (per seed) | Actual Wall-Clock (3 Parallel Seeds) | Representative Datasets |
+|:---|:---|:---|:---|:---|
+| **Small (<3K)** | ~2–3 min | 9.5 – 27 min | **~14 – 27 min** | `phoneme` (~14m), `wine` (~27m), `wine_quality` (~14m) |
+| **Medium (3–15K)** | ~5–8 min | 58 min – 3.7 hours | **~1.4 – 3.7 hours** | `churn` (~2h), `bank-marketing` (~1.7h), `california` (~3.7h) |
+| **Large (>15K)** | ~15–25 min | 3.5 – 12.6 hours | **~6.7 – 12.6 hours** | `adult` (~6.7h), `MiniBooNE` (~12.6h) |
+
+**Total Suite Runtime:** **~30+ hours** wall-clock across 11 datasets × 3 seeds on CPU.
+
+### Runtime Bottlenecks & CPU Execution Factors:
+1. **CPU Tensor Math:** PyTorch forward and backward passes run 10×–30× slower on CPU compared to GPU acceleration.
+2. **CPU Thread Contention:** Spawning 3 parallel PyTorch processes (`--workers 3`) each utilizing 5 threads (`--threads 5`) on a 16-thread CPU introduces cache thrashing and thread scheduling overhead.
+3. **Dataset Scale & Ensemble Size:** Processing large datasets like `MiniBooNE` (50,000 samples × 50 features) over 100 epochs across $k=16$ ensemble heads involves updating millions of values per epoch.
 
 ---
+
 
 ## References
 
