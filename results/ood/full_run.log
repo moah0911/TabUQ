@@ -1,0 +1,138 @@
+=== SIGMA 0.5 ===
+adult s0: entropy AUROC 0.748
+adult s1: entropy AUROC 0.765
+adult s2: entropy AUROC 0.719
+bank-marketing s0: entropy AUROC 0.445
+bank-marketing s1: entropy AUROC 0.430
+bank-marketing s2: entropy AUROC 0.443
+california s0: entropy AUROC 0.864
+california s1: entropy AUROC 0.867
+california s2: entropy AUROC 0.613
+wine_quality s0: entropy AUROC 0.633
+wine_quality s1: entropy AUROC 0.637
+wine_quality s2: entropy AUROC 0.621
+wine s0: entropy AUROC 0.501
+wine s1: entropy AUROC 0.474
+wine s2: entropy AUROC 0.508
+phoneme s0: entropy AUROC 0.511
+phoneme s1: entropy AUROC 0.513
+phoneme s2: entropy AUROC 0.494
+churn s0: entropy AUROC 0.500
+churn s1: entropy AUROC 0.500
+churn s2: entropy AUROC 0.500
+MagicTelescope s0: entropy AUROC 0.417
+MagicTelescope s1: entropy AUROC 0.410
+MagicTelescope s2: entropy AUROC 0.390
+credit s0: entropy AUROC 0.498
+credit s1: entropy AUROC 0.500
+credit s2: entropy AUROC 0.483
+MiniBooNE s0: entropy AUROC 0.688
+MiniBooNE s1: entropy AUROC 0.641
+MiniBooNE s2: entropy AUROC 0.737
+Ailerons s0: entropy AUROC 0.499
+Ailerons s1: entropy AUROC 0.507
+Ailerons s2: entropy AUROC 0.500
+adult: mean AUROC 0.744 +- 0.019 (n=3)
+bank-marketing: mean AUROC 0.439 +- 0.007 (n=3)
+california: mean AUROC 0.782 +- 0.119 (n=3)
+wine_quality: mean AUROC 0.630 +- 0.007 (n=3)
+wine: mean AUROC 0.495 +- 0.015 (n=3)
+phoneme: mean AUROC 0.506 +- 0.009 (n=3)
+churn: mean AUROC 0.500 +- 0.000 (n=3)
+MagicTelescope: mean AUROC 0.406 +- 0.012 (n=3)
+credit: mean AUROC 0.493 +- 0.007 (n=3)
+MiniBooNE: mean AUROC 0.689 +- 0.039 (n=3)
+Ailerons: mean AUROC 0.502 +- 0.004 (n=3)
+DONE sigma 0.5
+=== SIGMA 1.0 ===
+adult s0: entropy AUROC 0.734
+adult s1: entropy AUROC 0.750
+adult s2: entropy AUROC 0.696
+bank-marketing s0: entropy AUROC 0.377
+bank-marketing s1: entropy AUROC 0.358
+bank-marketing s2: entropy AUROC 0.395
+california s0: entropy AUROC 0.931
+california s1: entropy AUROC 0.928
+california s2: entropy AUROC 0.757
+wine_quality s0: entropy AUROC 0.787
+wine_quality s1: entropy AUROC 0.804
+wine_quality s2: entropy AUROC 0.794
+wine s0: entropy AUROC 0.451
+wine s1: entropy AUROC 0.439
+wine s2: entropy AUROC 0.456
+phoneme s0: entropy AUROC 0.508
+phoneme s1: entropy AUROC 0.510
+phoneme s2: entropy AUROC 0.484
+churn s0: entropy AUROC 0.500
+churn s1: entropy AUROC 0.500
+churn s2: entropy AUROC 0.500
+MagicTelescope s0: entropy AUROC 0.353
+MagicTelescope s1: entropy AUROC 0.332
+MagicTelescope s2: entropy AUROC 0.350
+credit s0: entropy AUROC 0.494
+credit s1: entropy AUROC 0.497
+credit s2: entropy AUROC 0.483
+MiniBooNE s0: entropy AUROC 0.681
+MiniBooNE s1: entropy AUROC 0.628
+MiniBooNE s2: entropy AUROC 0.747
+Ailerons s0: entropy AUROC 0.493
+Ailerons s1: entropy AUROC 0.512
+Ailerons s2: entropy AUROC 0.500
+adult: mean AUROC 0.727 +- 0.022 (n=3)
+bank-marketing: mean AUROC 0.377 +- 0.015 (n=3)
+california: mean AUROC 0.872 +- 0.081 (n=3)
+wine_quality: mean AUROC 0.795 +- 0.007 (n=3)
+wine: mean AUROC 0.449 +- 0.007 (n=3)
+phoneme: mean AUROC 0.501 +- 0.012 (n=3)
+churn: mean AUROC 0.500 +- 0.000 (n=3)
+MagicTelescope: mean AUROC 0.345 +- 0.009 (n=3)
+credit: mean AUROC 0.491 +- 0.006 (n=3)
+MiniBooNE: mean AUROC 0.685 +- 0.048 (n=3)
+Ailerons: mean AUROC 0.501 +- 0.008 (n=3)
+DONE sigma 1.0
+=== SIGMA 2.0 ===
+adult s0: entropy AUROC 0.699
+adult s1: entropy AUROC 0.712
+adult s2: entropy AUROC 0.645
+bank-marketing s0: entropy AUROC 0.305
+bank-marketing s1: entropy AUROC 0.284
+bank-marketing s2: entropy AUROC 0.356
+california s0: entropy AUROC 0.975
+california s1: entropy AUROC 0.966
+california s2: entropy AUROC 0.884
+wine_quality s0: entropy AUROC 0.931
+wine_quality s1: entropy AUROC 0.950
+wine_quality s2: entropy AUROC 0.944
+wine s0: entropy AUROC 0.398
+wine s1: entropy AUROC 0.383
+wine s2: entropy AUROC 0.392
+phoneme s0: entropy AUROC 0.474
+phoneme s1: entropy AUROC 0.442
+phoneme s2: entropy AUROC 0.427
+churn s0: entropy AUROC 0.500
+churn s1: entropy AUROC 0.500
+churn s2: entropy AUROC 0.500
+MagicTelescope s0: entropy AUROC 0.324
+MagicTelescope s1: entropy AUROC 0.281
+MagicTelescope s2: entropy AUROC 0.344
+credit s0: entropy AUROC 0.494
+credit s1: entropy AUROC 0.492
+credit s2: entropy AUROC 0.483
+MiniBooNE s0: entropy AUROC 0.675
+MiniBooNE s1: entropy AUROC 0.619
+MiniBooNE s2: entropy AUROC 0.749
+Ailerons s0: entropy AUROC 0.482
+Ailerons s1: entropy AUROC 0.570
+Ailerons s2: entropy AUROC 0.500
+adult: mean AUROC 0.685 +- 0.029 (n=3)
+bank-marketing: mean AUROC 0.315 +- 0.030 (n=3)
+california: mean AUROC 0.942 +- 0.041 (n=3)
+wine_quality: mean AUROC 0.942 +- 0.008 (n=3)
+wine: mean AUROC 0.391 +- 0.006 (n=3)
+phoneme: mean AUROC 0.448 +- 0.020 (n=3)
+churn: mean AUROC 0.500 +- 0.000 (n=3)
+MagicTelescope: mean AUROC 0.316 +- 0.026 (n=3)
+credit: mean AUROC 0.490 +- 0.005 (n=3)
+MiniBooNE: mean AUROC 0.681 +- 0.053 (n=3)
+Ailerons: mean AUROC 0.517 +- 0.038 (n=3)
+DONE sigma 2.0

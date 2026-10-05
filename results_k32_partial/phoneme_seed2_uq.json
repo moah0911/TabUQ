@@ -1,0 +1,17 @@
+{
+  "dataset": "phoneme",
+  "seed": 2,
+  "task_type": "binclass",
+  "accuracy": 0.8710644677661169,
+  "ECE": 0.0290083380295955,
+  "NLL": 0.304938942193985,
+  "uq": {
+    "predictive_entropy_mean": 0.3048866093158722,
+    "predictive_entropy_std": 0.23388183116912842,
+    "mutual_information_mean": 0.012703233398497105,
+    "mutual_information_std": 0.013306470587849617,
+    "total_uncertainty_mean": 0.3048866093158722,
+    "data_uncertainty_mean": 0.29218336939811707,
+    "epistemic_uncertainty_mean": 0.012703233398497105
+  }
+}

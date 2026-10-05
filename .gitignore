@@ -13,13 +13,6 @@ venv/
 .DS_Store
 
 # Data & Model outputs / logs
-results/
-results_*/
-*.log
-*.pt
-*.pth
-*.npy
-*.npz
 *.tar
 *.tar.gz
 *.pptx

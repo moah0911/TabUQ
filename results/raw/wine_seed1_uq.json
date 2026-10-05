@@ -1,0 +1,17 @@
+{
+  "dataset": "wine",
+  "seed": 1,
+  "task_type": "binclass",
+  "accuracy": 0.7132216014897579,
+  "ECE": 0.041369502770834114,
+  "NLL": 0.5252304673194885,
+  "uq": {
+    "predictive_entropy_mean": 0.5366302132606506,
+    "predictive_entropy_std": 0.14982345700263977,
+    "mutual_information_mean": 0.01624995656311512,
+    "mutual_information_std": 0.018240520730614662,
+    "total_uncertainty_mean": 0.5366302132606506,
+    "data_uncertainty_mean": 0.5203802585601807,
+    "epistemic_uncertainty_mean": 0.01624995656311512
+  }
+}

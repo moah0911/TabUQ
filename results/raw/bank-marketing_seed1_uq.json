@@ -1,0 +1,17 @@
+{
+  "dataset": "bank-marketing",
+  "seed": 1,
+  "task_type": "binclass",
+  "accuracy": 0.7736273627362736,
+  "ECE": 0.02683884289005014,
+  "NLL": 0.4794204831123352,
+  "uq": {
+    "predictive_entropy_mean": 0.4880937933921814,
+    "predictive_entropy_std": 0.19607390463352203,
+    "mutual_information_mean": 0.00488102063536644,
+    "mutual_information_std": 0.006682100240141153,
+    "total_uncertainty_mean": 0.4880937933921814,
+    "data_uncertainty_mean": 0.48321273922920227,
+    "epistemic_uncertainty_mean": 0.00488102063536644
+  }
+}

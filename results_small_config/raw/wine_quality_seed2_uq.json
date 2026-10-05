@@ -1,0 +1,13 @@
+{
+  "dataset": "wine_quality",
+  "seed": 2,
+  "task_type": "regression",
+  "rmse": 0.7568745017051697,
+  "NLL": 44.553794860839844,
+  "uq": {
+    "predictive_variance_mean": 0.014206797815859318,
+    "predictive_variance_std": 0.18659906089305878,
+    "predictive_std_mean": 0.0907677710056305,
+    "prediction_range_mean": 0.3288632333278656
+  }
+}

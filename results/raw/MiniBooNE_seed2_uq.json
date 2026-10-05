@@ -1,0 +1,17 @@
+{
+  "dataset": "MiniBooNE",
+  "seed": 2,
+  "task_type": "binclass",
+  "accuracy": 0.9381328032797068,
+  "ECE": 0.009931002968519767,
+  "NLL": 0.16493865847587585,
+  "uq": {
+    "predictive_entropy_mean": 0.18338359892368317,
+    "predictive_entropy_std": 0.20626522600650787,
+    "mutual_information_mean": 0.009962252341210842,
+    "mutual_information_std": 0.016089802607893944,
+    "total_uncertainty_mean": 0.18338359892368317,
+    "data_uncertainty_mean": 0.17342133820056915,
+    "epistemic_uncertainty_mean": 0.009962252341210842
+  }
+}

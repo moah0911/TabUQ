@@ -1,0 +1,17 @@
+{
+  "dataset": "MagicTelescope",
+  "seed": 0,
+  "task_type": "binclass",
+  "accuracy": 0.8163701067615659,
+  "ECE": 0.022455994132574753,
+  "NLL": 0.3929257392883301,
+  "uq": {
+    "predictive_entropy_mean": 0.41120579838752747,
+    "predictive_entropy_std": 0.2423548549413681,
+    "mutual_information_mean": 0.010781260207295418,
+    "mutual_information_std": 0.014192980714142323,
+    "total_uncertainty_mean": 0.41120579838752747,
+    "data_uncertainty_mean": 0.4004245102405548,
+    "epistemic_uncertainty_mean": 0.010781260207295418
+  }
+}

@@ -1,0 +1,75 @@
+======================================================================
+TabM-UQ Runner | 2026-07-18 23:10:22
+Config: k=32, blocks=3, d_block=512, epochs=200
+Embeddings: NONE (raw features)
+Workers: 3 | Threads/worker: 5
+======================================================================
+[adult seed=0] START
+[adult seed=1] START
+[adult seed=2] START
+[adult seed=2] SUCCESS in 12655.9s | Acc=0.7989
+[bank-marketing seed=0] START
+[bank-marketing seed=0] SUCCESS in 3940.3s | Acc=0.7741
+[bank-marketing seed=1] START
+[adult seed=0] SUCCESS in 17495.6s | Acc=0.8033
+[bank-marketing seed=2] START
+[bank-marketing seed=2] SUCCESS in 3515.3s | Acc=0.7700
+[california seed=0] START
+[bank-marketing seed=1] SUCCESS in 6280.1s | Acc=0.7736
+[california seed=1] START
+[adult seed=1] SUCCESS in 24263.7s | Acc=0.8089
+[california seed=2] START
+[california seed=0] SUCCESS in 11751.0s | Acc=0.8292
+[wine_quality seed=0] START
+[california seed=2] SUCCESS in 8810.8s | Acc=0.8748
+[wine_quality seed=1] START
+[wine_quality seed=0] SUCCESS in 785.7s | Acc=0.8023
+[wine_quality seed=2] START
+[wine_quality seed=1] SUCCESS in 797.5s | Acc=0.8061
+[wine seed=0] START
+[wine_quality seed=2] SUCCESS in 835.7s | Acc=0.8128
+[wine seed=1] START
+[wine seed=0] SUCCESS in 1511.7s | Acc=0.7188
+[wine seed=2] START
+[wine seed=1] SUCCESS in 1598.5s | Acc=0.7132
+[phoneme seed=0] START
+[california seed=1] SUCCESS in 13289.8s | Acc=0.8263
+[phoneme seed=1] START
+[phoneme seed=0] SUCCESS in 876.6s | Acc=0.8606
+[phoneme seed=2] START
+[wine seed=2] SUCCESS in 1658.5s | Acc=0.7169
+[phoneme seed=1] SUCCESS in 879.9s | Acc=0.8576
+[churn seed=0] START
+[churn seed=1] START
+[phoneme seed=2] SUCCESS in 571.5s | Acc=0.8561
+[churn seed=2] START
+[churn seed=1] SUCCESS in 7083.9s | Acc=0.7965
+[MagicTelescope seed=0] START
+[churn seed=0] SUCCESS in 7158.6s | Acc=0.7965
+[MagicTelescope seed=1] START
+[churn seed=2] SUCCESS in 7043.9s | Acc=0.7965
+[MagicTelescope seed=2] START
+[MagicTelescope seed=0] SUCCESS in 4863.0s | Acc=0.8164
+[credit seed=0] START
+[MagicTelescope seed=1] SUCCESS in 5137.8s | Acc=0.8185
+[credit seed=1] START
+[credit seed=0] UQ FAILED
+[credit seed=2] START
+[credit seed=1] SUCCESS in 1836.2s | Acc=0.4964
+[MiniBooNE seed=0] START
+[MagicTelescope seed=2] SUCCESS in 9130.2s | Acc=0.8267
+[MiniBooNE seed=1] START
+[credit seed=2] SUCCESS in 6058.7s | Acc=0.4962
+[MiniBooNE seed=2] START
+[MiniBooNE seed=0] SUCCESS in 45722.3s | Acc=0.9373
+[Ailerons seed=0] START
+[MiniBooNE seed=1] SUCCESS in 45526.6s | Acc=0.9374
+[Ailerons seed=1] START
+[Ailerons seed=0] SUCCESS in 4587.0s | Acc=0.0004
+[Ailerons seed=2] START
+[MiniBooNE seed=2] SUCCESS in 45700.7s | Acc=0.9381
+[Ailerons seed=1] SUCCESS in 4983.5s | Acc=0.0004
+[Ailerons seed=2] SUCCESS in 3538.0s | Acc=0.0004
+
+Done: 32/33 succeeded
+Summary: results/summary.json

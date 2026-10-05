@@ -1,0 +1,13 @@
+{
+  "dataset": "Ailerons",
+  "seed": 1,
+  "task_type": "regression",
+  "rmse": 0.002386564388871193,
+  "NLL": -3.9438159465789795,
+  "uq": {
+    "predictive_variance_mean": 8.097895624814555e-05,
+    "predictive_variance_std": 9.551499533699825e-05,
+    "predictive_std_mean": 0.00815405324101448,
+    "prediction_range_mean": 0.030051717534661293
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "dataset": "credit",
+  "seed": 2,
+  "task_type": "binclass",
+  "accuracy": 0.7253191489361702,
+  "ECE": 0.09535064377683275,
+  "NLL": 0.574249267578125,
+  "uq": {
+    "predictive_entropy_mean": 0.6323352456092834,
+    "predictive_entropy_std": 0.10071469098329544,
+    "mutual_information_mean": 0.08087942749261856,
+    "mutual_information_std": 0.07061570137739182,
+    "total_uncertainty_mean": 0.6323352456092834,
+    "data_uncertainty_mean": 0.5514557957649231,
+    "epistemic_uncertainty_mean": 0.08087942749261856
+  }
+}

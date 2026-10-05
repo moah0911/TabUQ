@@ -1,0 +1,592 @@
+[
+  {
+    "dataset": "Ailerons",
+    "seed": 0,
+    "task_type": "regression",
+    "rmse": 0.0004012487770523876,
+    "NLL": 791.1694946289062,
+    "uq": {
+      "predictive_variance_mean": 4.0642714888017295e-11,
+      "predictive_variance_std": 1.0737473410404874e-10,
+      "predictive_std_mean": 6.06960202276241e-06,
+      "prediction_range_mean": 3.800257036346011e-05
+    },
+    "status": "success",
+    "elapsed_seconds": 4587.034452199936
+  },
+  {
+    "dataset": "Ailerons",
+    "seed": 1,
+    "task_type": "regression",
+    "rmse": 0.0004004593938589096,
+    "NLL": 176.2904510498047,
+    "uq": {
+      "predictive_variance_mean": 5.168886985096321e-10,
+      "predictive_variance_std": 2.1566491648083996e-10,
+      "predictive_std_mean": 2.232029328297358e-05,
+      "prediction_range_mean": 0.00010556727647781372
+    },
+    "status": "success",
+    "elapsed_seconds": 4983.491242408752
+  },
+  {
+    "dataset": "Ailerons",
+    "seed": 2,
+    "task_type": "regression",
+    "rmse": 0.00040122083737514913,
+    "NLL": 794.2968139648438,
+    "uq": {
+      "predictive_variance_mean": 3.826510983073739e-11,
+      "predictive_variance_std": 3.469446951953614e-18,
+      "predictive_std_mean": 6.185880465636728e-06,
+      "prediction_range_mean": 2.4088833015412092e-05
+    },
+    "status": "success",
+    "elapsed_seconds": 3538.0004799365997
+  },
+  {
+    "dataset": "MagicTelescope",
+    "seed": 0,
+    "task_type": "binclass",
+    "accuracy": 0.8163701067615659,
+    "ECE": 0.022455994132574753,
+    "NLL": 0.3929257392883301,
+    "uq": {
+      "predictive_entropy_mean": 0.41120579838752747,
+      "predictive_entropy_std": 0.2423548549413681,
+      "mutual_information_mean": 0.010781260207295418,
+      "mutual_information_std": 0.014192980714142323,
+      "total_uncertainty_mean": 0.41120579838752747,
+      "data_uncertainty_mean": 0.4004245102405548,
+      "epistemic_uncertainty_mean": 0.010781260207295418
+    },
+    "status": "success",
+    "elapsed_seconds": 4862.959243774414
+  },
+  {
+    "dataset": "MagicTelescope",
+    "seed": 1,
+    "task_type": "binclass",
+    "accuracy": 0.8185053380782918,
+    "ECE": 0.017216750056718164,
+    "NLL": 0.3945102095603943,
+    "uq": {
+      "predictive_entropy_mean": 0.4018414318561554,
+      "predictive_entropy_std": 0.2430734932422638,
+      "mutual_information_mean": 0.010627209208905697,
+      "mutual_information_std": 0.014360211789608002,
+      "total_uncertainty_mean": 0.4018414318561554,
+      "data_uncertainty_mean": 0.3912142515182495,
+      "epistemic_uncertainty_mean": 0.010627209208905697
+    },
+    "status": "success",
+    "elapsed_seconds": 5137.838347911835
+  },
+  {
+    "dataset": "MagicTelescope",
+    "seed": 2,
+    "task_type": "binclass",
+    "accuracy": 0.8266903914590747,
+    "ECE": 0.021963969583613175,
+    "NLL": 0.37348848581314087,
+    "uq": {
+      "predictive_entropy_mean": 0.34863072633743286,
+      "predictive_entropy_std": 0.24808436632156372,
+      "mutual_information_mean": 0.018613846972584724,
+      "mutual_information_std": 0.024423666298389435,
+      "total_uncertainty_mean": 0.34863072633743286,
+      "data_uncertainty_mean": 0.3300168812274933,
+      "epistemic_uncertainty_mean": 0.018613846972584724
+    },
+    "status": "success",
+    "elapsed_seconds": 9130.192317008972
+  },
+  {
+    "dataset": "MiniBooNE",
+    "seed": 0,
+    "task_type": "binclass",
+    "accuracy": 0.9372631840486987,
+    "ECE": 0.007763514926592144,
+    "NLL": 0.16492526233196259,
+    "uq": {
+      "predictive_entropy_mean": 0.17761307954788208,
+      "predictive_entropy_std": 0.20589591562747955,
+      "mutual_information_mean": 0.008887741714715958,
+      "mutual_information_std": 0.014339974150061607,
+      "total_uncertainty_mean": 0.17761307954788208,
+      "data_uncertainty_mean": 0.16872532665729523,
+      "epistemic_uncertainty_mean": 0.008887741714715958
+    },
+    "status": "success",
+    "elapsed_seconds": 45722.28310227394
+  },
+  {
+    "dataset": "MiniBooNE",
+    "seed": 1,
+    "task_type": "binclass",
+    "accuracy": 0.9373874153674141,
+    "ECE": 0.013836392775641648,
+    "NLL": 0.16469024121761322,
+    "uq": {
+      "predictive_entropy_mean": 0.19540727138519287,
+      "predictive_entropy_std": 0.20523123443126678,
+      "mutual_information_mean": 0.009116750210523605,
+      "mutual_information_std": 0.013871293514966965,
+      "total_uncertainty_mean": 0.19540727138519287,
+      "data_uncertainty_mean": 0.18629050254821777,
+      "epistemic_uncertainty_mean": 0.009116750210523605
+    },
+    "status": "success",
+    "elapsed_seconds": 45526.63296055794
+  },
+  {
+    "dataset": "MiniBooNE",
+    "seed": 2,
+    "task_type": "binclass",
+    "accuracy": 0.9381328032797068,
+    "ECE": 0.009931002968519767,
+    "NLL": 0.16493865847587585,
+    "uq": {
+      "predictive_entropy_mean": 0.18338359892368317,
+      "predictive_entropy_std": 0.20626522600650787,
+      "mutual_information_mean": 0.009962252341210842,
+      "mutual_information_std": 0.016089802607893944,
+      "total_uncertainty_mean": 0.18338359892368317,
+      "data_uncertainty_mean": 0.17342133820056915,
+      "epistemic_uncertainty_mean": 0.009962252341210842
+    },
+    "status": "success",
+    "elapsed_seconds": 45700.659860134125
+  },
+  {
+    "dataset": "adult",
+    "seed": 0,
+    "task_type": "binclass",
+    "accuracy": 0.8032676125545114,
+    "ECE": 0.010720281971151857,
+    "NLL": 0.48326534032821655,
+    "uq": {
+      "predictive_entropy_mean": 0.49571681022644043,
+      "predictive_entropy_std": 0.07865221053361893,
+      "mutual_information_mean": 0.0015423210570588708,
+      "mutual_information_std": 0.007191233802586794,
+      "total_uncertainty_mean": 0.49571681022644043,
+      "data_uncertainty_mean": 0.49417442083358765,
+      "epistemic_uncertainty_mean": 0.0015423210570588708
+    },
+    "status": "success",
+    "elapsed_seconds": 17495.632156848907
+  },
+  {
+    "dataset": "adult",
+    "seed": 1,
+    "task_type": "binclass",
+    "accuracy": 0.8089183711074258,
+    "ECE": 0.12339019436016475,
+    "NLL": 0.4385097920894623,
+    "uq": {
+      "predictive_entropy_mean": 0.5062217712402344,
+      "predictive_entropy_std": 0.09395114332437515,
+      "mutual_information_mean": 0.016885146498680115,
+      "mutual_information_std": 0.010264293290674686,
+      "total_uncertainty_mean": 0.5062217712402344,
+      "data_uncertainty_mean": 0.48933663964271545,
+      "epistemic_uncertainty_mean": 0.016885146498680115
+    },
+    "status": "success",
+    "elapsed_seconds": 24263.655034303665
+  },
+  {
+    "dataset": "adult",
+    "seed": 2,
+    "task_type": "binclass",
+    "accuracy": 0.7989067010625883,
+    "ECE": 0.015294380675925595,
+    "NLL": 0.4859846830368042,
+    "uq": {
+      "predictive_entropy_mean": 0.501494288444519,
+      "predictive_entropy_std": 0.07465343177318573,
+      "mutual_information_mean": 0.0029157879762351513,
+      "mutual_information_std": 0.011140214279294014,
+      "total_uncertainty_mean": 0.501494288444519,
+      "data_uncertainty_mean": 0.4985784590244293,
+      "epistemic_uncertainty_mean": 0.0029157879762351513
+    },
+    "status": "success",
+    "elapsed_seconds": 12655.871221065521
+  },
+  {
+    "dataset": "bank-marketing",
+    "seed": 0,
+    "task_type": "binclass",
+    "accuracy": 0.774077407740774,
+    "ECE": 0.028922105377370676,
+    "NLL": 0.4801763892173767,
+    "uq": {
+      "predictive_entropy_mean": 0.4733653664588928,
+      "predictive_entropy_std": 0.20153926312923431,
+      "mutual_information_mean": 0.0054804543033242226,
+      "mutual_information_std": 0.006356887053698301,
+      "total_uncertainty_mean": 0.4733653664588928,
+      "data_uncertainty_mean": 0.46788495779037476,
+      "epistemic_uncertainty_mean": 0.0054804543033242226
+    },
+    "status": "success",
+    "elapsed_seconds": 3940.293029308319
+  },
+  {
+    "dataset": "bank-marketing",
+    "seed": 1,
+    "task_type": "binclass",
+    "accuracy": 0.7736273627362736,
+    "ECE": 0.02683884289005014,
+    "NLL": 0.4794204831123352,
+    "uq": {
+      "predictive_entropy_mean": 0.4880937933921814,
+      "predictive_entropy_std": 0.19607390463352203,
+      "mutual_information_mean": 0.00488102063536644,
+      "mutual_information_std": 0.006682100240141153,
+      "total_uncertainty_mean": 0.4880937933921814,
+      "data_uncertainty_mean": 0.48321273922920227,
+      "epistemic_uncertainty_mean": 0.00488102063536644
+    },
+    "status": "success",
+    "elapsed_seconds": 6280.0519824028015
+  },
+  {
+    "dataset": "bank-marketing",
+    "seed": 2,
+    "task_type": "binclass",
+    "accuracy": 0.77002700270027,
+    "ECE": 0.03148724665843507,
+    "NLL": 0.48365938663482666,
+    "uq": {
+      "predictive_entropy_mean": 0.4881964325904846,
+      "predictive_entropy_std": 0.1951274424791336,
+      "mutual_information_mean": 0.004637343343347311,
+      "mutual_information_std": 0.0058662439696490765,
+      "total_uncertainty_mean": 0.4881964325904846,
+      "data_uncertainty_mean": 0.4835590124130249,
+      "epistemic_uncertainty_mean": 0.004637343343347311
+    },
+    "status": "success",
+    "elapsed_seconds": 3515.2741351127625
+  },
+  {
+    "dataset": "california",
+    "seed": 0,
+    "task_type": "regression",
+    "rmse": 0.8291785717010498,
+    "NLL": 22.895668029785156,
+    "uq": {
+      "predictive_variance_mean": 0.022330882027745247,
+      "predictive_variance_std": 0.10964635759592056,
+      "predictive_std_mean": 0.12742576003074646,
+      "prediction_range_mean": 0.5458722710609436
+    },
+    "status": "success",
+    "elapsed_seconds": 11750.98643565178
+  },
+  {
+    "dataset": "california",
+    "seed": 1,
+    "task_type": "regression",
+    "rmse": 0.8263071775436401,
+    "NLL": 13.268306732177734,
+    "uq": {
+      "predictive_variance_mean": 0.04921972379088402,
+      "predictive_variance_std": 0.40668216347694397,
+      "predictive_std_mean": 0.1767675131559372,
+      "prediction_range_mean": 0.8485299348831177
+    },
+    "status": "success",
+    "elapsed_seconds": 13289.831426620483
+  },
+  {
+    "dataset": "california",
+    "seed": 2,
+    "task_type": "regression",
+    "rmse": 0.8747676610946655,
+    "NLL": 14.178048133850098,
+    "uq": {
+      "predictive_variance_mean": 0.07249663025140762,
+      "predictive_variance_std": 0.21595241129398346,
+      "predictive_std_mean": 0.21958564221858978,
+      "prediction_range_mean": 0.8000415563583374
+    },
+    "status": "success",
+    "elapsed_seconds": 8810.821850299835
+  },
+  {
+    "dataset": "churn",
+    "seed": 0,
+    "task_type": "binclass",
+    "accuracy": 0.7965,
+    "ECE": 0.0003280963897704936,
+    "NLL": 0.505216658115387,
+    "uq": {
+      "predictive_entropy_mean": 0.5056638121604919,
+      "predictive_entropy_std": 5.960464477539063e-08,
+      "mutual_information_mean": 0.0,
+      "mutual_information_std": 0.0,
+      "total_uncertainty_mean": 0.5056638121604919,
+      "data_uncertainty_mean": 0.5056638121604919,
+      "epistemic_uncertainty_mean": 0.0
+    },
+    "status": "success",
+    "elapsed_seconds": 7158.583795070648
+  },
+  {
+    "dataset": "churn",
+    "seed": 1,
+    "task_type": "binclass",
+    "accuracy": 0.7965,
+    "ECE": 0.0004356827735900737,
+    "NLL": 0.5052169561386108,
+    "uq": {
+      "predictive_entropy_mean": 0.5058102607727051,
+      "predictive_entropy_std": 0.0,
+      "mutual_information_mean": 1.1920928955078125e-07,
+      "mutual_information_std": 0.0,
+      "total_uncertainty_mean": 0.5058102607727051,
+      "data_uncertainty_mean": 0.5058102011680603,
+      "epistemic_uncertainty_mean": 1.1920928955078125e-07
+    },
+    "status": "success",
+    "elapsed_seconds": 7083.879061222076
+  },
+  {
+    "dataset": "churn",
+    "seed": 2,
+    "task_type": "binclass",
+    "accuracy": 0.7965,
+    "ECE": 0.00036725664138792524,
+    "NLL": 0.505216658115387,
+    "uq": {
+      "predictive_entropy_mean": 0.5057172179222107,
+      "predictive_entropy_std": 5.960464477539063e-08,
+      "mutual_information_mean": 0.0,
+      "mutual_information_std": 0.0,
+      "total_uncertainty_mean": 0.5057172179222107,
+      "data_uncertainty_mean": 0.5057172179222107,
+      "epistemic_uncertainty_mean": 0.0
+    },
+    "status": "success",
+    "elapsed_seconds": 7043.942440509796
+  },
+  {
+    "dataset": "credit",
+    "seed": 0,
+    "task_type": "binclass",
+    "accuracy": 0.49638297872340426,
+    "ECE": 0.00395664854252592,
+    "NLL": 0.6931516528129578,
+    "uq": {
+      "predictive_entropy_mean": 0.6931469440460205,
+      "predictive_entropy_std": 1.8545428304150846e-08,
+      "mutual_information_mean": 4.601493856171146e-05,
+      "mutual_information_std": 5.4600665322368513e-08,
+      "total_uncertainty_mean": 0.6931469440460205,
+      "data_uncertainty_mean": 0.6931008696556091,
+      "epistemic_uncertainty_mean": 4.601493856171146e-05
+    },
+    "status": "success"
+  },
+  {
+    "dataset": "credit",
+    "seed": 1,
+    "task_type": "binclass",
+    "accuracy": 0.49638297872340426,
+    "ECE": 0.0038763014813686936,
+    "NLL": 0.6931527256965637,
+    "uq": {
+      "predictive_entropy_mean": 0.6931447386741638,
+      "predictive_entropy_std": 4.664063817472197e-05,
+      "mutual_information_mean": 3.913828550139442e-05,
+      "mutual_information_std": 0.00011422568059060723,
+      "total_uncertainty_mean": 0.6931447386741638,
+      "data_uncertainty_mean": 0.6931055784225464,
+      "epistemic_uncertainty_mean": 3.913828550139442e-05
+    },
+    "status": "success",
+    "elapsed_seconds": 1836.1733889579773
+  },
+  {
+    "dataset": "credit",
+    "seed": 2,
+    "task_type": "binclass",
+    "accuracy": 0.49617021276595746,
+    "ECE": 0.009160839395320183,
+    "NLL": 0.6922920346260071,
+    "uq": {
+      "predictive_entropy_mean": 0.6928834319114685,
+      "predictive_entropy_std": 0.004565894138067961,
+      "mutual_information_mean": 0.0001867633982328698,
+      "mutual_information_std": 0.0035711710806936026,
+      "total_uncertainty_mean": 0.6928834319114685,
+      "data_uncertainty_mean": 0.692696750164032,
+      "epistemic_uncertainty_mean": 0.0001867633982328698
+    },
+    "status": "success",
+    "elapsed_seconds": 6058.727163314819
+  },
+  {
+    "dataset": "phoneme",
+    "seed": 0,
+    "task_type": "binclass",
+    "accuracy": 0.8605697151424287,
+    "ECE": 0.032620998068727994,
+    "NLL": 0.32799580693244934,
+    "uq": {
+      "predictive_entropy_mean": 0.29636192321777344,
+      "predictive_entropy_std": 0.23250170052051544,
+      "mutual_information_mean": 0.005632312502712011,
+      "mutual_information_std": 0.006213024258613586,
+      "total_uncertainty_mean": 0.29636192321777344,
+      "data_uncertainty_mean": 0.2907296121120453,
+      "epistemic_uncertainty_mean": 0.005632312502712011
+    },
+    "status": "success",
+    "elapsed_seconds": 876.6282477378845
+  },
+  {
+    "dataset": "phoneme",
+    "seed": 1,
+    "task_type": "binclass",
+    "accuracy": 0.8575712143928036,
+    "ECE": 0.0197567479542528,
+    "NLL": 0.3210269808769226,
+    "uq": {
+      "predictive_entropy_mean": 0.3299606740474701,
+      "predictive_entropy_std": 0.23425960540771484,
+      "mutual_information_mean": 0.005005857441574335,
+      "mutual_information_std": 0.00562667241320014,
+      "total_uncertainty_mean": 0.3299606740474701,
+      "data_uncertainty_mean": 0.3249548375606537,
+      "epistemic_uncertainty_mean": 0.005005857441574335
+    },
+    "status": "success",
+    "elapsed_seconds": 879.8741128444672
+  },
+  {
+    "dataset": "phoneme",
+    "seed": 2,
+    "task_type": "binclass",
+    "accuracy": 0.856071964017991,
+    "ECE": 0.022401251446182036,
+    "NLL": 0.33789223432540894,
+    "uq": {
+      "predictive_entropy_mean": 0.34545981884002686,
+      "predictive_entropy_std": 0.232574924826622,
+      "mutual_information_mean": 0.00338296452537179,
+      "mutual_information_std": 0.0035031854640692472,
+      "total_uncertainty_mean": 0.34545981884002686,
+      "data_uncertainty_mean": 0.3420768678188324,
+      "epistemic_uncertainty_mean": 0.00338296452537179
+    },
+    "status": "success",
+    "elapsed_seconds": 571.5394303798676
+  },
+  {
+    "dataset": "wine",
+    "seed": 0,
+    "task_type": "binclass",
+    "accuracy": 0.7188081936685289,
+    "ECE": 0.045753321390134216,
+    "NLL": 0.5250921845436096,
+    "uq": {
+      "predictive_entropy_mean": 0.536297619342804,
+      "predictive_entropy_std": 0.15995754301548004,
+      "mutual_information_mean": 0.018752841278910637,
+      "mutual_information_std": 0.022117579355835915,
+      "total_uncertainty_mean": 0.536297619342804,
+      "data_uncertainty_mean": 0.5175447463989258,
+      "epistemic_uncertainty_mean": 0.018752841278910637
+    },
+    "status": "success",
+    "elapsed_seconds": 1511.6937508583069
+  },
+  {
+    "dataset": "wine",
+    "seed": 1,
+    "task_type": "binclass",
+    "accuracy": 0.7132216014897579,
+    "ECE": 0.041369502770834114,
+    "NLL": 0.5252304673194885,
+    "uq": {
+      "predictive_entropy_mean": 0.5366302132606506,
+      "predictive_entropy_std": 0.14982345700263977,
+      "mutual_information_mean": 0.01624995656311512,
+      "mutual_information_std": 0.018240520730614662,
+      "total_uncertainty_mean": 0.5366302132606506,
+      "data_uncertainty_mean": 0.5203802585601807,
+      "epistemic_uncertainty_mean": 0.01624995656311512
+    },
+    "status": "success",
+    "elapsed_seconds": 1598.4745943546295
+  },
+  {
+    "dataset": "wine",
+    "seed": 2,
+    "task_type": "binclass",
+    "accuracy": 0.7169459962756052,
+    "ECE": 0.042521897085996074,
+    "NLL": 0.5160712003707886,
+    "uq": {
+      "predictive_entropy_mean": 0.5244205594062805,
+      "predictive_entropy_std": 0.16738224029541016,
+      "mutual_information_mean": 0.016868868842720985,
+      "mutual_information_std": 0.020882565528154373,
+      "total_uncertainty_mean": 0.5244205594062805,
+      "data_uncertainty_mean": 0.5075516104698181,
+      "epistemic_uncertainty_mean": 0.016868868842720985
+    },
+    "status": "success",
+    "elapsed_seconds": 1658.4518110752106
+  },
+  {
+    "dataset": "wine_quality",
+    "seed": 0,
+    "task_type": "regression",
+    "rmse": 0.8023362755775452,
+    "NLL": 24.315893173217773,
+    "uq": {
+      "predictive_variance_mean": 0.015260644257068634,
+      "predictive_variance_std": 0.022242512553930283,
+      "predictive_std_mean": 0.11751512438058853,
+      "prediction_range_mean": 0.4925656020641327
+    },
+    "status": "success",
+    "elapsed_seconds": 785.726229429245
+  },
+  {
+    "dataset": "wine_quality",
+    "seed": 1,
+    "task_type": "regression",
+    "rmse": 0.8061135411262512,
+    "NLL": 32.24477005004883,
+    "uq": {
+      "predictive_variance_mean": 0.011092521250247955,
+      "predictive_variance_std": 0.020286278799176216,
+      "predictive_std_mean": 0.10095031559467316,
+      "prediction_range_mean": 0.4169526696205139
+    },
+    "status": "success",
+    "elapsed_seconds": 797.4533541202545
+  },
+  {
+    "dataset": "wine_quality",
+    "seed": 2,
+    "task_type": "regression",
+    "rmse": 0.8128069043159485,
+    "NLL": 30.980121612548828,
+    "uq": {
+      "predictive_variance_mean": 0.011345171369612217,
+      "predictive_variance_std": 0.011356767266988754,
+      "predictive_std_mean": 0.10333329439163208,
+      "prediction_range_mean": 0.43550729751586914
+    },
+    "status": "success",
+    "elapsed_seconds": 835.7435598373413
+  }
+]

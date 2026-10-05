@@ -1,0 +1,13 @@
+{
+  "dataset": "california",
+  "seed": 1,
+  "task_type": "regression",
+  "rmse": 0.8263071775436401,
+  "NLL": 13.268306732177734,
+  "uq": {
+    "predictive_variance_mean": 0.04921972379088402,
+    "predictive_variance_std": 0.40668216347694397,
+    "predictive_std_mean": 0.1767675131559372,
+    "prediction_range_mean": 0.8485299348831177
+  }
+}

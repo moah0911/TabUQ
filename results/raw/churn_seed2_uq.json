@@ -1,0 +1,17 @@
+{
+  "dataset": "churn",
+  "seed": 2,
+  "task_type": "binclass",
+  "accuracy": 0.7965,
+  "ECE": 0.00036725664138792524,
+  "NLL": 0.505216658115387,
+  "uq": {
+    "predictive_entropy_mean": 0.5057172179222107,
+    "predictive_entropy_std": 5.960464477539063e-08,
+    "mutual_information_mean": 0.0,
+    "mutual_information_std": 0.0,
+    "total_uncertainty_mean": 0.5057172179222107,
+    "data_uncertainty_mean": 0.5057172179222107,
+    "epistemic_uncertainty_mean": 0.0
+  }
+}

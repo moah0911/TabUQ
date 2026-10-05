@@ -1,0 +1,17 @@
+{
+  "dataset": "adult",
+  "seed": 2,
+  "task_type": "binclass",
+  "accuracy": 0.7989067010625883,
+  "ECE": 0.015294380675925595,
+  "NLL": 0.4859846830368042,
+  "uq": {
+    "predictive_entropy_mean": 0.501494288444519,
+    "predictive_entropy_std": 0.07465343177318573,
+    "mutual_information_mean": 0.0029157879762351513,
+    "mutual_information_std": 0.011140214279294014,
+    "total_uncertainty_mean": 0.501494288444519,
+    "data_uncertainty_mean": 0.4985784590244293,
+    "epistemic_uncertainty_mean": 0.0029157879762351513
+  }
+}
