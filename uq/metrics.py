@@ -1,8 +1,6 @@
 """Uncertainty Quantification metrics for TabM."""
 import torch
-import torch.nn.functional as F
 import numpy as np
-from typing import Union
 
 
 def predictive_entropy(predictions: torch.Tensor) -> torch.Tensor:
@@ -52,7 +50,7 @@ def predictive_variance(predictions: torch.Tensor) -> torch.Tensor:
     """
     if predictions.dim() == 3 and predictions.shape[2] == 1:
         predictions = predictions.squeeze(2)
-    return predictions.var(dim=1)
+    return predictions.var(dim=1, unbiased=False)
 
 
 def entropy_of_mean_vs_mean_of_entropy(predictions: torch.Tensor) -> dict:
@@ -120,8 +118,8 @@ def compute_all_uq_metrics_regression(
         pred_2d = predictions
     
     mean_pred = pred_2d.mean(dim=1)
-    variance = pred_2d.var(dim=1)
-    std = pred_2d.std(dim=1)
+    variance = pred_2d.var(dim=1, unbiased=False)
+    std = pred_2d.std(dim=1, unbiased=False)
     
     # Also compute min/max range as a simple uncertainty proxy
     min_pred = pred_2d.min(dim=1)[0]

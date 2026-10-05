@@ -72,10 +72,10 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--datasets", nargs="+", default=None)
     parser.add_argument("--seeds", nargs="+", type=int, default=[0, 1, 2])
-    parser.add_argument("--k", type=int, default=16)
-    parser.add_argument("--n-blocks", type=int, default=1)
-    parser.add_argument("--d-block", type=int, default=128)
-    parser.add_argument("--epochs", type=int, default=100)
+    parser.add_argument("--k", type=int, default=32)
+    parser.add_argument("--n-blocks", type=int, default=3)
+    parser.add_argument("--d-block", type=int, default=512)
+    parser.add_argument("--epochs", type=int, default=200)
     parser.add_argument("--patience", type=int, default=20)
     parser.add_argument("--eval-every", type=int, default=5)
     parser.add_argument("--device", type=str, default="cpu")
@@ -121,7 +121,8 @@ def main():
                 stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True,
                 env={**dict(subprocess.os.environ),
                      "OMP_NUM_THREADS": str(args.threads),
-                     "MKL_NUM_THREADS": str(args.threads)},
+                     "MKL_NUM_THREADS": str(args.threads),
+                     "OPENBLAS_NUM_THREADS": str(args.threads)},
             )
             running.append((d, s, p, time.time()))
             print(f"[{d} seed={s}] START")
@@ -138,7 +139,8 @@ def main():
                         capture_output=True, text=True,
                         env={**dict(subprocess.os.environ),
                              "OMP_NUM_THREADS": str(args.threads),
-                             "MKL_NUM_THREADS": str(args.threads)},
+                             "MKL_NUM_THREADS": str(args.threads),
+                             "OPENBLAS_NUM_THREADS": str(args.threads)},
                     )
                     uq_path = Path(f"results/raw/{d}_seed{s}_uq.json")
                     if r.returncode == 0 and uq_path.exists():

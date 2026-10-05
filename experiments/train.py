@@ -19,7 +19,7 @@ def train_on_dataset(
     batch_size: int = None,
     patience: int = 20,
     eval_every: int = 5,
-    k: int = 16,
+    k: int = 32,
     n_blocks: int = 3,
     d_block: int = 512,
     use_embeddings: bool = False,
@@ -181,7 +181,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("dataset", type=str, help="Dataset name")
     parser.add_argument("--seed", type=int, default=0)
-    parser.add_argument("--k", type=int, default=16)
+    parser.add_argument("--k", type=int, default=32)
     parser.add_argument("--n-blocks", type=int, default=3)
     parser.add_argument("--d-block", type=int, default=512)
     parser.add_argument("--epochs", type=int, default=200)

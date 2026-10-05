@@ -20,7 +20,6 @@ DATASET_NAME_MAP = {
     "Ailerons": "regression-num-medium-0-Ailerons",
 }
 
-# Our 10 datasets
 DATASETS = list(DATASET_NAME_MAP.keys())
 
 

@@ -25,7 +25,9 @@ fi
 # Check log
 echo ""
 echo "Latest Log Entries:"
-if [ -f "results/full_run.log" ]; then
+if [ -f "results/k32_no_embeddings.log" ]; then
+    tail -10 results/k32_no_embeddings.log
+elif [ -f "results/full_run.log" ]; then
     tail -10 results/full_run.log
 else
     echo "  No log file found"

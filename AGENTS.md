@@ -19,8 +19,8 @@
 - **Variants:**
   - **TabM** (default): No embeddings, raw features
   - **TabM†** (enhanced): With `LinearReLUEmbeddings` or `PiecewiseLinearEmbeddings`
-- **Current config (Phase 1):** n_blocks=1, d_block=128, k=16, NO embeddings
-- **Target config (Phase 2):** n_blocks=3, d_block=512, k=32, LinearReLUEmbeddings
+- **Pilot config (`results_small_config/`):** n_blocks=1, d_block=128, k=16, NO embeddings (~1.5h, validation)
+- **Canonical config (`results/`):** n_blocks=3, d_block=512, k=32, NO embeddings — true default TabM (single-model, `TabM†` out of scope)
 
 ### UQ Pipeline
 - `uq/metrics.py` — Entropy, MI, Variance
@@ -72,11 +72,11 @@ nohup .venv/bin/python run_all.py \
   --workers 3 --threads 5 \
   > results/full_run.log 2>&1 &
 
-# Phase 2 (exact config — paper defaults)
+# Phase 2 (canonical — default TabM k32, no embeddings, ~30h)
 nohup .venv/bin/python run_all.py \
   --k 32 --n-blocks 3 --d-block 512 --epochs 200 \
   --workers 3 --threads 5 \
-  > results/full_run.log 2>&1 &
+  > results/k32_no_embeddings.log 2>&1 &
 ```
 
 ### Check Status
@@ -84,7 +84,7 @@ nohup .venv/bin/python run_all.py \
 bash check_status.sh
 # Or manually:
 ls results/raw/*_uq.json | wc -l    # Count completed
-tail -f results/full_run.log         # Watch live log
+tail -f results/k32_no_embeddings.log  # Watch live log
 ```
 
 ### Resume After Interrupt
@@ -191,9 +191,10 @@ export MKL_NUM_THREADS=5
 
 ## Current Status (as of last update)
 
-- ✅ Phase 1 complete: 11 datasets × 3 seeds with small config
-- 🔄 Phase 2 in progress: Exact paper config (k=32, n_blocks=3, d_block=512, with embeddings)
-- ⏳ M3-M8 pending
+- ✅ Phase 1 complete: 11 datasets × 3 seeds with small config (`results_small_config/`)
+- ✅ Phase 2 complete: 11 datasets × 3 seeds with canonical config (`results/` k32/no-emb, 33/33) — see `docs/k32_canonical_summary.md`
+- 🔄 Phase 3 in progress: OOD evaluation (synthetic noise, `experiments/ood_evaluate.py`)
+- ⏳ M4-M8 pending (baselines deferred per single-model scope)
 
 ---
 

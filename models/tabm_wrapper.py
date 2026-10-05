@@ -1,9 +1,8 @@
 """TabM model wrapper with training and evaluation utilities."""
 import torch
-import torch.nn as nn
 import torch.nn.functional as F
 from torch.utils.data import TensorDataset, DataLoader
-from typing import Dict, Tuple, Optional, Any
+from typing import Dict, Tuple, Optional
 import numpy as np
 from tabm import TabM
 from rtdl_num_embeddings import LinearReLUEmbeddings
@@ -391,7 +390,7 @@ class TabMWrapper:
     
     def load(self, path: str) -> None:
         """Load model state."""
-        checkpoint = torch.load(path, map_location=self.device)
+        checkpoint = torch.load(path, map_location=self.device, weights_only=False)
         self.model.load_state_dict(checkpoint["model_state"])
         self.optimizer.load_state_dict(checkpoint["optimizer_state"])
         self.history = checkpoint["history"]

@@ -10,13 +10,13 @@ This project directly addresses the paper's stated future work: *"evaluate TabM 
 
 TabM produces **k predictions per object** (shape `(B, k, d_out)`) via parameter-efficient ensembling. This project:
 
-1. **Reproduces TabM** on 10 tabular benchmarks from the paper's official dataset suite
-2. **Derives uncertainty estimates** from the k ensemble predictions:
+1. **Reproduces single-model TabM (default, `k=32`, no embeddings)** on 11 tabular benchmarks from the paper's official dataset suite
+2. **Derives uncertainty estimates** from the k ensemble predictions `(B,k,d_out)`:
    - Predictive Entropy
    - Mutual Information (epistemic uncertainty)
    - Predictive Variance (regression)
 3. **Evaluates calibration** via:
-   - Expected Calibration Error (ECE)
+   - Expected Calibration Error (ECE, 15 bins)
    - Negative Log-Likelihood (NLL)
    - Reliability diagrams
 
@@ -26,14 +26,14 @@ TabM produces **k predictions per object** (shape `(B, k, d_out)`) via parameter
 
 | Component | Setting | Paper Reference |
 |-----------|---------|-----------------|
-| Model | TabM (without embeddings) | Default in paper |
-| Ensemble size k | 16 | Section 6.1 |
-| Blocks | 2 | Hyperparameter range |
-| Hidden dim | 256 | Hyperparameter range |
-| Optimizer | AdamW (lr=2e-3, wd=3e-4) | Default |
-| Epochs | 100 (early stopping) | Standard protocol |
+| Model | **TabM (vanilla, no embeddings)** — single model only | `tabm.TabM.make` default (`TabM†` = with embeddings) |
+| Ensemble size k | **32** (fixed, not tuned) | Paper §3.3, `tabm.py:1700` |
+| Blocks | **3** | `TabM.make` fallback (`2` if embeddings); paper tunes `UniformInt[1,5]` Table 6 |
+| Hidden dim | **512** | `TabM.make` fallback; paper tunes `UniformInt[64,1024]` |
+| Optimizer | AdamW (lr=2e-3, wd=3e-4) | Paper default |
+| Epochs | 200 (early stopping, eval_every=5) | This project |
 
-**Note:** We use TabM *without* feature embeddings (`LinearReLUEmbeddings`) for computational efficiency. This is explicitly documented as the paper's default baseline configuration. For the highest accuracy, one can enable `PiecewiseLinearEmbeddings` (TabM†).
+**Single-model scope:** Only vanilla TabM (`k=32`, no embeddings) is evaluated — this is the paper's default. `TabM†` (with `PiecewiseLinearEmbeddings`/`LinearReLUEmbeddings`, `TabM-mini`/`packed`) are out of scope. Pilot lightweight config `k=16/1/128/100ep` is in `results_small_config/` for validation only.
 
 ---
 
@@ -79,7 +79,7 @@ Var = (1/k) Σ_i (y_i - ȳ)^2
 
 ## Datasets
 
-All 10 datasets are from the official TabM paper benchmark (50-dataset suite) and are accessed via the preprocessed `.npy` files from the authors' HuggingFace tarball.
+All 11 datasets are from the official TabM paper benchmark (50-dataset suite) and are accessed via the preprocessed `.npy` files from the authors' HuggingFace tarball.
 
 | # | Dataset | Task | Train Size | Features |
 |---|---------|------|------------|----------|
@@ -162,15 +162,15 @@ tar -xf tabm_repo/local/tabm-data.tar -C tabm_repo/data
 
 ### Run Full Experiment Suite
 
-Train and evaluate UQ on all 10 datasets with 3 random seeds:
+Train and evaluate UQ on all 11 datasets with 3 random seeds (single-model TabM `k=32`):
 
 ```bash
-# Start the full run (runs in background)
+# Default TabM (k=32, 3/512, no embeddings, 200 epochs) — canonical 30h run
 nohup .venv/bin/python run_all.py \
-  --k 16 \
-  --n-blocks 2 \
-  --d-block 256 \
-  --epochs 100 \
+  --k 32 \
+  --n-blocks 3 \
+  --d-block 512 \
+  --epochs 200 \
   --patience 20 \
   --eval-every 5 \
   --workers 3 \
@@ -178,16 +178,19 @@ nohup .venv/bin/python run_all.py \
   > results/full_run.log 2>&1 &
 ```
 
-**Default settings** (can be omitted):
-- k=16, n_blocks=2, d_block=256, epochs=100
-- workers=3 (parallel seeds), threads=5 (per worker)
+**Pilot (lightweight validation, ~1.5h):**
+```bash
+nohup .venv/bin/python run_all.py \
+  --k 16 --n-blocks 1 --d-block 128 --epochs 100 \
+  --workers 3 --threads 5 > results_small_config/full_run.log 2>&1 &
+```
 
 ### Run Single Dataset
 
 ```bash
-# Train
+# Train (default TabM)
 .venv/bin/python -m experiments.train phoneme \
-  --seed 0 --k 16 --n-blocks 2 --d-block 256 --epochs 100
+  --seed 0 --k 32 --n-blocks 3 --d-block 512 --epochs 200
 
 # Evaluate UQ
 .venv/bin/python -m experiments.evaluate_uq phoneme --seed 0
@@ -215,7 +218,7 @@ The runner automatically skips completed seeds. Just re-run:
 
 ```bash
 nohup .venv/bin/python run_all.py \
-  --k 16 --n-blocks 2 --d-block 256 --epochs 100 \
+  --k 32 --n-blocks 3 --d-block 512 --epochs 200 \
   --workers 3 --threads 5 \
   > results/full_run.log 2>&1 &
 ```

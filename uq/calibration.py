@@ -3,9 +3,7 @@ import numpy as np
 import matplotlib
 matplotlib.use('Agg')  # Non-interactive backend
 import matplotlib.pyplot as plt
-from typing import Optional, Tuple, Dict
-import torch
-import torch.nn.functional as F
+from typing import Dict, Optional
 
 
 def expected_calibration_error(

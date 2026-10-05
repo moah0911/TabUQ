@@ -10,7 +10,7 @@
 
 ## 2. Abstract
 
-Tabular data dominates high-stakes domains (medical diagnosis, credit scoring, fault detection), yet uncertainty quantification (UQ) and out-of-distribution (OOD) detection for tabular models remain under-studied. The recent **TabM** model (Gorishniy et al., ICLR 2025) introduces a parameter-efficient MLP ensemble that produces $k$ predictions per object, but its authors explicitly leave the evaluation of TabM for UQ and OOD detection as future work. This project addresses that gap: we (i) reproduce TabM on 5-10 tabular benchmarks, (ii) develop UQ scoring methods (predictive entropy, mutual information, variance) over TabM's $k$ predictions, (iii) evaluate OOD detection across covariate and semantic shifts, and (iv) benchmark against MC Dropout, deep ensembles, and temperature scaling. The result is a calibrated, interpretable tabular model that is competitive on accuracy while providing actionable uncertainty estimates.
+Tabular data dominates high-stakes domains (medical diagnosis, credit scoring, fault detection), yet uncertainty quantification (UQ) and out-of-distribution (OOD) detection for tabular models remain under-studied. The recent **TabM** model (Gorishniy et al., ICLR 2025) introduces a parameter-efficient MLP ensemble that produces $k$ predictions per object, but its authors explicitly leave the evaluation of TabM for UQ and OOD detection as future work. This project addresses that gap using a **single model — TabM (vanilla, `k=32`, no embeddings)**. We (i) reproduce this TabM on 11 tabular benchmarks, (ii) develop UQ scoring methods (predictive entropy, mutual information, variance) over TabM's $k$ predictions, (iii) evaluate OOD detection across covariate and semantic shifts, and (iv) report calibration (ECE/NLL). The result is the first systematic UQ/OOD evaluation of TabM, providing actionable uncertainty estimates without modifying the architecture.
 
 ## 3. Background & Motivation
 
@@ -37,10 +37,10 @@ To date, **no follow-up work has addressed this**. This project fills that gap.
 
 ## 4. Research Questions
 
-1. **RQ1**: Can the $k$ predictions from a single TabM model be used directly as an uncertainty estimate, and how does it compare to a traditional deep ensemble of $k$ independent MLPs?
-2. **RQ2**: How well does TabM detect OOD samples (covariate shift and semantic shift) compared to established baselines?
-3. **RQ3**: Is TabM better-calibrated than prior tabular DL models and GBDTs out-of-the-box? Can calibration be further improved via post-hoc methods?
-4. **RQ4**: How does ensemble size $k$ affect the trade-off between accuracy, uncertainty quality, and computational cost?
+1. **RQ1**: Can the $k=32$ predictions from a single TabM (vanilla, no embeddings) be used directly as an uncertainty estimate?
+2. **RQ2**: How well does TabM detect OOD samples (covariate shift and semantic shift) via its UQ scores?
+3. **RQ3**: How well-calibrated is TabM out-of-the-box (ECE/NLL) and can post-hoc temperature scaling help?
+4. **RQ4**: How does ensemble size $k$ affect the trade-off between accuracy, uncertainty quality, and computational cost? (deferred — single fixed $k=32$)
 
 ## 5. Proposed Method
 
@@ -100,78 +100,70 @@ For each dataset and model:
 - **Negative Log-Likelihood (NLL)**: probabilistic quality of the predictive distribution
 - **Reliability diagrams**: visual comparison
 
-### 5.5 Baselines
+### 5.5 Baselines — Deferred (Post-Acceptance Gate)
 
-| Baseline | Description |
-|----------|-------------|
-| **MLP (vanilla)** | Single MLP, no ensembling; softmax confidence as UQ |
-| **MC Dropout** | $k=32$ forward passes with dropout enabled |
-| **Deep Ensemble** | $k=32$ independently-trained MLPs |
-| **Temperature Scaling** | Post-hoc calibration on a held-out set |
-| **GBDT (LightGBM)** | Tree-based baseline |
-| **TabR** | Retrieval-based tabular DL baseline (for accuracy reference) |
+Single-model focus for Acceptance: **no baselines required**. Baselines below are planned for Phase 2 (after R1):
 
-### 5.6 Ablations
+| Baseline | Description | Status |
+|----------|-------------|--------|
+| **MLP (vanilla)** | Single MLP, no ensembling; softmax confidence as UQ | Deferred |
+| **MC Dropout** | $k=32$ forward passes with dropout enabled | Deferred |
+| **Deep Ensemble** | $k=32$ independently-trained MLPs | Deferred |
+| **Temperature Scaling** | Post-hoc calibration on a held-out set | Deferred |
+| **GBDT (LightGBM)** | Tree-based baseline | Deferred |
+| **TabR** | Retrieval-based tabular DL baseline | Out of scope |
 
-- **Effect of $k$**: $k \in \{4, 8, 16, 32, 64\}$
-- **Effect of arch_type**: `tabm` vs `tabm-mini` vs `tabm-packed`
+### 5.6 Ablations — Deferred
+
+Single-model focus: **no arch/embedding ablations for Acceptance**. Planned post-R1 (optional):
+
+- **Effect of $k$**: $k \in \{16, 32\}$ (paper fixes $k=32$, not tuned)
 - **UQ score choice**: entropy vs MI vs variance
 - **Calibration method**: raw vs temperature scaling
+- `arch_type` (`tabm-mini`/`packed`) and `TabM†` (with `PiecewiseLinearEmbeddings`) are **out of scope** — they are enhanced variants, not the default TabM.
 
 ## 6. Experimental Protocol
 
-### 6.1 Training Protocol (Two-Phase)
+### 6.1 Training Protocol — Single Model (TabM default)
 
-#### Phase 1: CPU-Feasible Reproduction (M1)
-For initial pipeline validation on CPU, we use a lightweight configuration:
-- **Architecture**: `n_blocks=1`, `d_block=128`, `k=16`
-- **Embeddings**: **None** (raw features) — this is the paper's default TabM baseline
+**Canonical model (paper-default, `TabM.make` fallback):**
+`arch_type='tabm'`, `k=32` (fixed, not tuned — paper §3.3), `n_blocks=3`, `d_block=512`, `dropout=0.1`, `num_embeddings=None` (raw features + one-hot cats), `AdamW(lr=2e-3, wd=3e-4)`. Paper tunes `n_blocks∈[1,5]`, `d_block∈[64,1024]` per-dataset (`Table 6`); `3/512` is the untuned fallback — used here for CPU-feasible single-model evaluation without Optuna. `TabM†` (with `PiecewiseLinearEmbeddings`/`LinearReLUEmbeddings`, `Table 7`) is the enhanced variant and is **out of scope**.
+
+#### Phase 1: CPU-Feasible Reproduction (M1 — Completed)
+Lightweight pilot for pipeline validation:
+- **Architecture**: `n_blocks=1`, `d_block=128`, `k=16`, `num_embeddings=None`
 - **Optimizer**: AdamW (`lr=2e-3`, `weight_decay=3e-4`)
-- **Epochs**: 100 (early stopping with patience=20)
-- **Batch size**: Auto-scaled (256-2048 based on dataset size)
-- **Parallel**: 3 seeds in parallel, 5 CPU threads per worker
-- **Runtime**: ~2-3 hours for all 11 datasets × 3 seeds
+- **Epochs**: 100 (early stopping patience=20), `eval_every=5`
+- **Batch size**: Auto-scaled (256-2048), Parallel: 3 seeds ×5 threads
+- **Runtime (measured)**: ~1.5h wall for 11×3 (see `results_small_config/full_run.log`)
+- **Result**: `docs/reproducibility_report_small_config.md`, `results_small_config/` 33/33 — within paper ranges, used only for validation.
 
-**Rationale:** This configuration is within the paper's hyperparameter ranges (`n_blocks` ∈ [1,5], `d_block` ∈ [64,1024]) and produces valid UQ metrics while remaining CPU-feasible. See `docs/reproducibility_report_small_config.md` for full results.
-
-#### Phase 2: Exact Paper Configuration (M2 Validation)
-For final comparison with the paper's reported metrics:
-- **Architecture**: `n_blocks=3`, `d_block=512`, `k=32` (paper defaults)
-- **Embeddings**: `LinearReLUEmbeddings` (TabM† variant)
+#### Phase 2: Default TabM (M2 — Canonical, 11 Datasets)
+- **Architecture**: `n_blocks=3`, `d_block=512`, `k=32`, `num_embeddings=None` (true default TabM)
 - **Optimizer**: AdamW (`lr=2e-3`, `weight_decay=3e-4`)
-- **Epochs**: 200 (early stopping with patience=20)
-- **Seeds**: 3 seeds per dataset
-- **Runtime**: ~40-60 min per seed for small datasets, longer for large
-
-*Note: Due to CPU constraints, exact-config experiments are run on a subset of 3 representative datasets (e.g., phoneme, wine, churn) for validation, rather than all 11.*
+- **Epochs**: 200 (early stopping patience=20), `eval_every=5`
+- **Seeds**: 3 per dataset, **all 11 datasets**
+- **Runtime (measured)**: ~30h wall for 11×3 (`results/k32_no_embeddings.log` — small 9–27m/seed, medium 58m–3.7h/seed, large 3.5–12.6h/seed e.g. MiniBooNE). `results/` 33/33 on disk.
 
 #### Hyperparameter Tuning
-- **M1**: Skipped (fixed lightweight defaults for speed)
-- **M4+**: Optuna with 30-50 trials if time permits (GPU cluster or extended runtime)
+- Skipped for Acceptance (fixed defaults). Optuna 30-50 trials deferred to Phase 2 stretch if needed.
 
-### 6.2 Compute Budget
+### 6.2 Compute Budget (Measured)
 
-All experiments run on CPU (16-thread Intel i5-12500H).
+All experiments run on CPU (16-thread Intel i5-12500H, 3 workers ×5 threads).
 
-**Phase 1 (Small Config, M1):**
-- Small datasets (<3K samples): ~2-3 min per seed
-- Medium datasets (3-15K): ~5-8 min per seed
-- Large datasets (>15K): ~15-25 min per seed
-- **Total**: ~2-3 hours wall-clock for 11 datasets × 3 seeds (with parallelization)
+**Phase 1 (Pilot k16/1/128, M1 — measured):**
+- Small (<3K): 9.5–27m / seed; Medium (3–15K): 58m–3.7h / seed; Large (>15K): 3.5–12.6h / seed
+- **Total**: ~1.5h wall for 11×3 (`results_small_config/full_run.log`)
 
-**Phase 2 (Exact Config, M2):**
-- Small datasets: ~15-25 min per seed
-- Medium datasets: ~30-45 min per seed
-- Large datasets: ~60-90 min per seed
-- **Total**: ~4-6 hours for 3 validation datasets × 3 seeds
+**Phase 2 (Default TabM k32/3/512/no-emb, M2 — measured):**
+- Small: 9–27m / seed; Medium: 58m–3.7h / seed; Large: 3.5–12.6h / seed (MiniBooNE 12.6h/seed)
+- **Total**: ~30h wall for 11×3 (`results/k32_no_embeddings.log`)
 
-**Overall project timeline:**
-- M1 (Reproduction): ~1-2 days (including documentation)
-- M2 (UQ pipeline): ~1-2 weeks
-- M3 (OOD detection): ~2-3 weeks
-- M4 (Baselines): ~2-3 weeks
-- M5 (Ablations): ~2 weeks
-- M6-M8 (Paper writing): ~3 months
+**Overall (single-model scope):**
+- M1 repro + UQ pipeline: ~2 days (completed)
+- M2 canonical TabM + calibration: ~2 days (completed, 30h)
+- M3 OOD detection: ~2–3 weeks (next)
 
 ### 6.3 Reproducibility
 
@@ -187,26 +179,20 @@ All experiments run on CPU (16-thread Intel i5-12500H).
 3. **Open-source benchmark** of uncertainty methods on tabular data
 4. **Publication-ready paper** for an IEEE or Springer conference (e.g., IEEE TNNLS, ESWA, NeurReps, PAKDD)
 
-## 8. Timeline (8 months) — Revised
+## 8. Timeline (8 months) — Single-Model
 
 | Month | Activities | Deliverable | Status |
 |-------|-----------|-------------|--------|
-| **M1** | Setup environment, clone TabM repo, install dependencies, reproduce 11 datasets with lightweight config (n_blocks=1, d_block=128, k=16), write reproducibility report | Reproducibility report | ✅ **COMPLETED** (Day 1) |
-| **M2** | Implement UQ scoring functions (entropy, MI, variance); add calibration metrics (ECE, NLL); run exact config validation (n_blocks=3, d_block=512, k=32, LinearReLUEmbeddings) on 3 datasets | Working UQ pipeline + validation results | 🔄 **IN PROGRESS** |
-| **M3** | Implement OOD detection pipeline (semantic/covariate/synthetic shifts); compute AUROC, AUPR, FPR@95TPR | OOD detection results table | ⏳ Pending |
-| **M4** | Run baselines (MC Dropout, Deep Ensemble, Temperature Scaling, LightGBM); compare UQ quality | Comparison table + plots | ⏳ Pending |
-| **M5** | Ablations (k effect, arch_type comparison, UQ score choice); reliability diagrams; final hyperparameter sweep if time permits | Ablation analysis | ⏳ Pending |
-| **M6** | Draft paper (intro, method, experiments); internal review; camera-ready prep | First paper draft | ⏳ Pending |
-| **M7** | Code cleanup; README; reproducibility check; supplementary materials | Submission-ready manuscript | ⏳ Pending |
-| **M8** | Submit to chosen venue; address reviewer comments if applicable | Submitted paper | ⏳ Pending |
+| **M1** | Setup, clone TabM repo, install deps, lightweight pilot `k16/1/128/no-emb` on 11 datasets, write reproducibility report | Reproducibility report | ✅ **COMPLETED** (`results_small_config/` 33/33, ~1.5h) |
+| **M2** | UQ scoring (entropy/MI/variance) + calibration (ECE/NLL, 15 bins); **default TabM** `k32/3/512/no-emb` on **11 datasets** | UQ pipeline + `results/` 33/33 (~30h) | ✅ **COMPLETED** (on disk; `summary.json` stale) |
+| **M3** | OOD detection pipeline (noise / feature-corruption / population shift); AUROC/AUPR/FPR@95TPR | OOD results table | ⏳ Next |
+| **M4** | Baselines (MC Dropout/DeepEns/TempScale/LightGBM) — **deferred** | Comparison table | ⏳ Deferred |
+| **M5** | Ablations (`k` 16 vs 32, UQ score) — **deferred** | Ablation plots | ⏳ Deferred |
+| **M6** | Draft paper (intro, method, experiments) | First draft | ⏳ Pending |
+| **M7** | Code cleanup, README, reproducibility check | Manuscript | ⏳ Pending |
+| **M8** | Submit (workshop target: NeurIPS Tabular / ICLR Practical DL) | Submitted paper | ⏳ Pending |
 
-**Note:** M1 and initial M2 work were completed in a single day by using a CPU-optimized configuration. The exact-config validation (full paper defaults) is the current active task.
-| **M3** | Implement OOD detection pipeline; run main experiments on all datasets | Initial OOD results table |
-| **M4** | Run baselines (MC Dropout, Deep Ensemble, Temperature Scaling); compare | Comparison table + plots |
-| **M5** | Ablations (k, arch_type, UQ score choice); reliability diagrams | Ablation analysis |
-| **M6** | Draft paper (intro, method, experiments); internal review | First paper draft |
-| **M7** | Camera-ready preparation; code cleanup; README; reproducibility check | Submission-ready manuscript |
-| **M8** | Submit to chosen venue; address reviewer comments if applicable | Submitted paper |
+**Note:** Single model only — `TabM` default (`k=32`, no embeddings). `TabM†` (+embeddings) and `arch_type` variants are out of scope. AW-TabM (adaptive weighting) is optional Phase-2 stretch, not required for Acceptance (R1 13 Jul 2026).
 
 ## 9. Risk Assessment & Mitigations
 
@@ -261,16 +247,17 @@ All experiments run on CPU (16-thread Intel i5-12500H).
 
 ## Appendix A: Why TabM (vs. TabR)?
 
-We considered improving **TabR** (ICLR 2024) instead, but **TabM** is a better fit for the FYP scope:
+We considered **TabR** (ICLR 2024), but **TabM** is a better fit — single vanilla `TabM k=32/no-emb` without architectural changes:
 
-| Aspect | TabR path | TabM path |
-|--------|-----------|-----------|
-| Architectural changes needed | High (new similarity/value modules) | None (post-hoc scoring) |
-| Implementation complexity | High | Low |
-| Novelty source | Architectural improvement | Application of future-work item |
+| Aspect | TabR path | **TabM (single-model) path** |
+|--------|-----------|------------------------------|
+| Architectural changes needed | High (new similarity/value modules) | None (post-hoc UQ scoring on `(B,k,d_out)`) |
+| Implementation complexity | High | Low (~50 lines UQ) |
+| Novelty source | Architectural improvement | First UQ/OOD evaluation of default TabM (paper future work §7) |
 | Paper clarity | "Better retrieval" | "First UQ/OOD evaluation of TabM" |
-| CPU efficiency | ~minutes per dataset | ~seconds per dataset |
-| Reproducibility | Complex (k-NN retrieval) | Simple (pure MLP) |
+| CPU efficiency | ~minutes per dataset | ~seconds–minutes per dataset |
+| Reproducibility | Complex (k-NN retrieval) | Simple (pure MLP, `pip install tabm`) |
+| Model scope | Multiple variants | **Single model only**: `TabM k=32/3/512/no-emb` (TabM† out of scope) |
 
 ## Appendix B: Proposal Submission
 
