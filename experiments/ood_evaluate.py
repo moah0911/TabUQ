@@ -32,7 +32,42 @@ def add_noise(X, sigma_scale, rng):
     noise = rng.normal(0, 1, size=X.shape).astype(np.float32) * (sigma_scale * std)
     return X + noise
 
-def evaluate_one(dataset, seed, sigma):
+
+def apply_mask(X, ratio, rng):
+    """Zero-out random fraction of num features per matrix."""
+    Xc = X.copy()
+    mask = rng.random(X.shape) < ratio
+    Xc[mask] = 0.0
+    return Xc.astype(np.float32)
+
+
+def apply_shuffle(X, rng):
+    """Permute each column independently (destroys feature correlations)."""
+    Xc = X.copy()
+    for j in range(X.shape[1]):
+        perm = rng.permutation(X.shape[0])
+        Xc[:, j] = X[perm, j]
+    return Xc.astype(np.float32)
+
+
+def apply_scale(X, delta):
+    """Synthetic covariate shift: uniform scaling mimics population drift."""
+    return (X * (1.0 + delta)).astype(np.float32)
+
+
+def corrupt(X, corruption, rng, sigma=1.0, mask_ratio=0.25, delta=0.3):
+    if corruption == "noise":
+        return add_noise(X, sigma, rng)
+    if corruption == "mask":
+        return apply_mask(X, mask_ratio, rng)
+    if corruption == "shuffle":
+        return apply_shuffle(X, rng)
+    if corruption == "scale":
+        return apply_scale(X, delta)
+    raise ValueError(f"Unknown corruption: {corruption}")
+
+
+def evaluate_one(dataset, seed, sigma=1.0, corruption="noise", mask_ratio=0.25, delta=0.3):
     # Load dataset
     X_num, X_cat, Y, info = load_dataset(dataset)
     task = info["task_type"]
@@ -59,9 +94,10 @@ def evaluate_one(dataset, seed, sigma):
     wrapper.load(str(ckpt))
     # ID scores
     id_scores = ood_scores(wrapper, x_test, c_test)
-    # OOD scores (noisy)
-    rng = np.random.default_rng(42+seed)
-    x_ood = add_noise(x_test, sigma, rng)
+    # OOD scores (corrupted)
+    offset = {"noise": 0, "mask": 100, "shuffle": 200, "scale": 300}.get(corruption, 0)
+    rng = np.random.default_rng(42+seed+offset)
+    x_ood = corrupt(x_test, corruption, rng, sigma=sigma, mask_ratio=mask_ratio, delta=delta)
     ood_sc = ood_scores(wrapper, x_ood, c_test)
     # For classification primary score = entropy, secondary mi, max_prob (negate for roc)
     results = {}
@@ -91,19 +127,32 @@ if __name__ == "__main__":
     import argparse
     from data.loaders import DATASETS
     parser = argparse.ArgumentParser()
+    parser.add_argument("--corruption", type=str, default="noise",
+                        choices=["noise", "mask", "shuffle", "scale"])
     parser.add_argument("--sigma", type=float, default=1.0)
+    parser.add_argument("--mask-ratio", type=float, default=0.25)
+    parser.add_argument("--delta", type=float, default=0.3)
     parser.add_argument("--datasets", nargs="*", default=DATASETS)
     parser.add_argument("--seeds", nargs="*", type=int, default=[0,1,2])
     args = parser.parse_args()
+    if args.corruption == "noise":
+        tag = f"sigma{args.sigma}"
+    elif args.corruption == "mask":
+        tag = f"mask{args.mask_ratio}"
+    elif args.corruption == "shuffle":
+        tag = "shuffle"
+    else:
+        tag = f"scale{args.delta}"
     Path("results/ood").mkdir(parents=True, exist_ok=True)
     all_res = {}
     for ds in args.datasets:
         for sd in args.seeds:
             try:
-                r = evaluate_one(ds, sd, args.sigma)
+                r = evaluate_one(ds, sd, sigma=args.sigma, corruption=args.corruption,
+                                 mask_ratio=args.mask_ratio, delta=args.delta)
                 all_res[f"{ds}_seed{sd}"] = r
-                print(f"{ds} s{sd}: entropy AUROC {r.get('entropy',{}).get('auroc', r.get('variance',{}).get('auroc')):.3f}")
-                with open(f"results/ood/{ds}_seed{sd}_sigma{args.sigma}.json","w") as f:
+                print(f"{ds} s{sd} [{args.corruption} {tag}]: entropy AUROC {r.get('entropy',{}).get('auroc', r.get('variance',{}).get('auroc')):.3f}")
+                with open(f"results/ood/{ds}_seed{sd}_{tag}.json","w") as f:
                     json.dump(r,f,indent=2)
             except Exception as e:
                 print(f"FAIL {ds} s{sd}: {e}")
@@ -119,5 +168,5 @@ if __name__ == "__main__":
             by_ds[ds].append(score)
     for ds, vals in by_ds.items():
         print(f"{ds}: mean AUROC {np.mean(vals):.3f} +- {np.std(vals):.3f} (n={len(vals)})")
-    with open(f"results/ood/summary_sigma{args.sigma}.json","w") as f:
+    with open(f"results/ood/summary_{tag}.json","w") as f:
         json.dump(all_res, f, indent=2)
